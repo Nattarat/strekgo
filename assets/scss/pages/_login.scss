@@ -1,0 +1,83 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Login
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+.login {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .login-segment {
+    &.is-logo {
+      margin-bottom: $spacing-md;
+      text-align: center;
+    }
+
+    &.is-form {
+      margin-bottom: $spacing-sm;
+    }
+
+    &.is-button {
+      margin-bottom: $spacing-xxs;
+    }
+
+    &.is-footer {
+      display: flex;
+      justify-content: space-between;
+      padding-left: $spacing-xs;
+      padding-right: $spacing-xs;
+    }
+  }
+
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .link {
+
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

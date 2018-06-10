@@ -40,10 +40,10 @@
   $button-height-small: $button-height-sm,
   $button-height-large: $button-height-lg,
   $button-padding: 0 10px,
-  $button-background-color: $color-gray-3,
+  $button-background-color: $color-orange-1,
   $button-border-width: 0,
   $button-border-color: transparent,
-  $button-border-radius: $border-radius-xs,
+  $button-border-radius: 0,
   $button-box-shadow: 0 0 0 rgba(0, 0, 0, 0),
 
   // Body hover
@@ -198,58 +198,6 @@
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
   @include button-variant();
-
-  // Helpers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Parent styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States with modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Media queries
-  // >>>>>>>>>>>>>>>>>>>>>>>
-}
-
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE 10-11
-.ie {}
-
-// Edge
-.edge {}
-
-// Safari mac
-.safari {}
-
-// Firefox
-.firefox {}
-
-// Safari iPhone/iPad
-.safari-mobile {}
-
-// Chrome Android
-.chrome-mobile {}
-
-// Primary
-// ------------------------------------------------
-.button-primary {
-  // Mixins
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include button-variant(
-    $button-background-color: $color-pink-1,
-    $button-background-color-hover: $color-pink-2
-  );
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>

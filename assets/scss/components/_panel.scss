@@ -1,0 +1,173 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Panel
+// * Structure & Detail
+// * Mixins
+// * Contextual variations
+//   - Default
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Structure & Detail
+// ============================================================
+/*
+<div class="panel">
+  Content here...
+</div>
+*/
+
+// Mixins
+// ============================================================
+@mixin panel-variant(
+  $panel-border: 0
+) {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  border: $panel-border;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Contextual variations
+// ============================================================
+
+// Default
+// ------------------------------------------------
+.panel {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include panel-variant();
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Form
+// ------------------------------------------------
+.panel-form {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include panel-variant(
+    $panel-border: $border-width-mn solid $color-gray-4
+  );
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  border-bottom: 0;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

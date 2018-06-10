@@ -1,0 +1,164 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Field
+// * Structure & Detail
+// * Mixins
+// * Contextual variations
+//   - Default
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Structure & Detail
+// ============================================================
+/*
+<div class="field">
+  Content here...
+</div>
+*/
+
+// Mixins
+// ============================================================
+@mixin field-variant(
+  // Filed input
+  $field-background-color: $color-white,
+  $field-border-bottom: $border-width-mn solid $color-gray-4,
+  $field-border-bottom-error-color: $color-red-1,
+  $field-placeholder-color: $color-gray-3,
+  $field-height: $field-height-default,
+  $field-padding: 0 $spacing-tn,
+  $field-text-style: $text-style-first-md-bold,
+  $field-text-color: $color-gray-5,
+
+  // Field message
+  $field-message-padding: 0 $spacing-tn $spacing-tn,
+  $field-message-text-style: $text-style-first-xxs-bold,
+  $field-message-text-color: $color-red-1
+) {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  background-color: $field-background-color;
+  border-bottom: $field-border-bottom;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .field-input {
+    @include placeholder($color: $field-placeholder-color);
+    @extend #{$field-text-style};
+    width: 100%;
+    height: $field-height;
+    padding: $field-padding;
+    border: 0;
+    color: $field-text-color;
+  }
+
+  .field-message {
+    @extend #{$field-message-text-style};
+    display: none;
+    padding: $field-message-padding;
+    color: $field-message-text-color;
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-error {
+    border-bottom-color: $field-border-bottom-error-color;
+
+    .field-input {
+      height: auto;
+      padding-top: 10px;
+    }
+
+    .field-message {
+      display: block;
+    }
+  }
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Contextual variations
+// ============================================================
+
+// Default
+// ------------------------------------------------
+.field {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include field-variant();
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

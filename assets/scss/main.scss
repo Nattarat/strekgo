@@ -30,6 +30,10 @@
 // ============================================================
 @import 'components/buttons';
 @import 'components/medias';
+@import 'components/background-container';
+@import 'components/field';
+@import 'components/panel';
+@import 'components/container';
 
 // Collections
 // ============================================================
@@ -42,3 +46,5 @@
 // Pages
 // ============================================================
 @import 'pages/home';
+@import 'pages/splash-screen';
+@import 'pages/login';

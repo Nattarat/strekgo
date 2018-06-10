@@ -40,12 +40,13 @@ h6 {
 }
 
 a {
-  color: $color-red-1;
+  @extend #{$text-style-first-sm-bold};
+  color: $color-orange-1;
   text-decoration: none;
 
   &:hover,
   &:focus {
-      color: $color-gray-4;
+      color: $color-orange-1;
   }
 
   &:active {
