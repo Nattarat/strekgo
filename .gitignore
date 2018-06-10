@@ -1,0 +1,12 @@
+# Files
+prepros.cfg
+prepros-6.config
+.DS_Store
+debug.log
+package-lock.json
+
+# Folders
+build
+test
+node_modules
+.vscode

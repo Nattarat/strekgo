@@ -1,0 +1,394 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Typography
+// * Embed font
+//   - DBHelvethaicaX
+//     - Bd Cond
+//   - MyriadPro
+//     - Regular
+// * Mixins
+// * Class component
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Embed font
+// ============================================================
+
+// DB Helvethaica X
+// ------------------------------------------------
+// Bd Cond
+@font-face {
+  font-family: $font-family-first-bold;
+  src: url('#{$path-file-fonts-first-bold}.eot');
+  src: url('#{$path-file-fonts-first-bold}.eot') format('embedded-opentype'),
+       url('#{$path-file-fonts-first-bold}.woff') format('woff'),
+       url('#{$path-file-fonts-first-bold}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Myriad Pro
+// ------------------------------------------------
+// Regular
+@font-face {
+  font-family: $font-family-second-regular;
+  src: url('#{$path-file-fonts-second-regular}.eot');
+  src: url('#{$path-file-fonts-second-regular}.eot') format('embedded-opentype'),
+       url('#{$path-file-fonts-second-regular}.woff') format('woff'),
+       url('#{$path-file-fonts-second-regular}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Mixins
+// ============================================================
+@mixin text-variant(
+  $text-display: inline-block,
+  $text-font-family: initial,
+  $text-font-size: initial,
+  $text-line-height: initial,
+  $text-letter-spacing: normal
+) {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  display: $text-display;
+  font-family: $text-font-family;
+  font-size: $text-font-size;
+  font-weight: normal;
+  line-height: $text-line-height;
+  letter-spacing: $text-letter-spacing;
+  vertical-align: middle;
+  text-transform: none;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  &:hover,
+  &:focus {
+      text-decoration: none;
+  }
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  // Text transforms
+  &.is-uppercase {
+    text-transform: uppercase;
+  }
+
+  // 'Bold' not write in mixin because font-family maybe have more than one. See example case below
+  //
+  // &.is-bold {
+  //   font-family: $font-family-primary-bold;
+  // }
+  //
+  // &.is-bold {
+  //   font-family: $font-family-secondary-bold;
+  // }
+
+  // 'Font size' not write in mixin because font-family maybe have more than one. See example case below
+  //
+  // &.is-size-xs {
+  //   font-size: $font-size-primary-xs;
+  // }
+  //
+  // &.is-size-xs {
+  //   font-size: $font-size-secondary-xs;
+  // }
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Contextual variations
+// ============================================================
+
+// First
+// ------------------------------------------------
+.text-first {
+  // Mini
+  // Class name: .text-first-mn
+  &-mn {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-mn,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Tiny
+  // Class name: .text-first-tn
+  &-tn {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-tn,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Extra extra small
+  // Class name: .text-first-xxs
+  &-xxs {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-xxs,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Extra small
+  // Class name: .text-first-xs
+  &-xs {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-xs,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Small
+  // Class name: .text-first-sm
+  &-sm {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-sm,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Medium
+  // Class name: .text-first-md
+  &-md {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-md,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Large
+  // Class name: .text-first-lg
+  &-lg {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-lg,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Extra large
+  // Class name: .text-first-xl
+  &-xl {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-xl,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Extra extra large
+  // Class name: .text-first-xxl
+  &-xxl {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-xxl,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Big
+  // Class name: .text-first-bg
+  &-bg {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-bg,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Huge
+  // Class name: .text-first-hg
+  &-hg {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-hg,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // STYLES OF MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  // Not create modifier class for font weight bold because can't direct @extend to class
+  // &.is-bold {
+  //   font-family: $font-family-primary-bold;
+  // }
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Second
+// ------------------------------------------------
+.text-second {
+  // Mini
+  // Class name: .text-second-mn
+  &-mn {
+    @include text-variant(
+      $text-display: inline-block,
+      $text-font-family: $font-family-second-regular,
+      $text-font-size: $font-size-second-mn,
+      $text-line-height: $line-height-second-default,
+      $text-letter-spacing: $letter-spacing-default
+    );
+  }
+
+  // Tiny
+  // Class name: .text-second-tn
+  &-tn {
+    @include text-variant(
+      $text-display: inline-block,
+      $text-font-family: $font-family-second-regular,
+      $text-font-size: $font-size-second-tn,
+      $text-line-height: $line-height-second-default,
+      $text-letter-spacing: $letter-spacing-default
+    );
+  }
+
+  // Extra extra small
+  // Class name: .text-second-xxs
+  &-xxs {
+    @include text-variant(
+      $text-display: inline-block,
+      $text-font-family: $font-family-second-regular,
+      $text-font-size: $font-size-second-xxs,
+      $text-line-height: $line-height-second-default,
+      $text-letter-spacing: $letter-spacing-default
+    );
+  }
+
+  // STYLES OF MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  // Not create modifier class for font weight bold because can't direct @extend to class
+  // &.is-bold {
+  //   font-family: $font-family-primary-bold;
+  // }
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

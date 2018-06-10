@@ -1,0 +1,230 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Variables
+// * Path files
+// * Colors
+// * Font families
+// * Font sizes
+// * Line heights
+// * Letter spacings
+// * Text styles
+// * Z indexs
+// * Breakpoints (Physical width of device screen)
+// * Animation timings
+// * Border radiuses
+// * Box shadows
+// * Component widths
+// * Component heights
+// * Spacings
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Path files
+// ============================================================
+$path-file-images: '../images' !default;
+$path-file-fonts: '../fonts' !default;
+$path-file-fonts-first-bold: '../fonts/dbhelvethaicax/dbhelvethaicax-bd-cond' !default;
+$path-file-fonts-second-regular: '../fonts/myriadpro/myriadpro-regular' !default;
+$path-file-contents: '../images/contents' !default;
+$path-file-icons: '../images/icons' !default;
+$path-file-logos: '../images/logos' !default;
+$path-file-shares: '../images/shares' !default;
+
+// Colors
+// ============================================================
+// Base
+$color-black: #000000 !default;
+$color-white: #FFFFFF !default;
+
+// Gray
+$color-gray-1: #A7A9AC !default;
+$color-gray-2: #D1D3D4 !default;
+$color-gray-3: #939598 !default;
+$color-gray-4: #808285 !default;
+$color-gray-5: #6D6E71 !default;
+$color-gray-6: #58595B !default;
+
+// Orange
+$color-orange-1: #F58220 !default;
+$color-orange-2: #F08121 !default; // Font
+$color-orange-3: #B26014 !default;
+
+// Red
+$color-red-1: #FF0000 !default;
+
+// Pink
+$color-pink-1: #FF5684 !default;
+$color-pink-2: #F97FA0 !default;
+
+// Blue
+$color-blue-1: #08AAF1 !default;
+
+// Overlay
+$color-overlay-1: rgba(0, 0, 0, 0.5) !default;
+
+// Font families
+// ============================================================
+$font-family-first-bold: DBHelvethaicaX-Bd-Cond !default;
+$font-family-second-regular: MyriadPro-Regular !default;
+
+// Font sizes
+// ============================================================
+// First
+$font-size-first-mn: 14px !default;
+$font-size-first-tn: 18px !default;
+$font-size-first-xxs: 20px !default;
+$font-size-first-xs: 22px !default;
+$font-size-first-sm: 24px !default;
+$font-size-first-md: 26px !default;
+$font-size-first-lg: 28px !default;
+$font-size-first-xl: 30px !default;
+$font-size-first-xxl: 34px !default;
+$font-size-first-bg: 38px !default;
+$font-size-first-hg: 42px !default;
+
+// Second
+$font-size-second-mn: 10px !default; // New label
+$font-size-second-tn: 12px !default; // Sub title
+$font-size-second-xxs: 20px !default; // Title
+
+
+// Line heights
+// ============================================================
+$line-height-first-default: 0.9 !default;
+$line-height-second-default: 1.3 !default;
+
+// Letter spacings
+// ============================================================
+$letter-spacing-default: normal !default;
+
+// Text styles
+// your stylesheets. Example: @extend #{$text-style-first-mn-bold};
+// ============================================================
+// First Bold
+$text-style-first-mn-bold: '.text-first-mn-bold' !default;
+$text-style-first-tn-bold: '.text-first-tn-bold' !default;
+$text-style-first-xxs-bold: '.text-first-xxs-bold' !default;
+$text-style-first-xs-bold: '.text-first-xs-bold' !default;
+$text-style-first-sm-bold: '.text-first-sm-bold' !default;
+$text-style-first-md-bold: '.text-first-md-bold' !default;
+$text-style-first-lg-bold: '.text-first-lg-bold' !default;
+$text-style-first-xl-bold: '.text-first-xl-bold' !default;
+$text-style-first-xxl-bold: '.text-first-xxl-bold' !default;
+$text-style-first-bg-bold: '.text-first-bg-bold' !default;
+$text-style-first-hg-bold: '.text-first-hg-bold' !default;
+
+// Second Regular
+$text-style-second-mn: '.text-second-mn' !default;
+$text-style-second-tn: '.text-second-tn' !default;
+$text-style-second-xxs: '.text-second-xxs' !default;
+
+// Z indexs
+// ============================================================
+$z-index-1: 1 !default;
+$z-index-2: 9 !default;
+$z-index-3: 99 !default;
+$z-index-4: 999 !default;
+$z-index-5: 9999 !default;
+
+// Breakpoints (Physical width of device screen)
+// ============================================================
+// Mobile
+$breakpoint-mobile-xs: 320px !default;
+$breakpoint-mobile-sm: 360px !default;
+$breakpoint-mobile-md: 375px !default;
+$breakpoint-mobile-lg: 414px !default;
+
+// Phablet
+$breakpoint-phablet-xs: 480px !default;
+$breakpoint-phablet-sm: 640px !default;
+$breakpoint-phablet-md: 667px !default;
+$breakpoint-phablet-lg: 736px !default;
+
+// Tablet
+$breakpoint-tablet-xs: 768px !default;
+$breakpoint-tablet-sm: 800px !default;
+$breakpoint-tablet-md: 812px !default;
+$breakpoint-tablet-lg: 1024px !default;
+
+// Desktop
+$breakpoint-desktop-xs: 1280px !default;
+$breakpoint-desktop-sm: 1366px !default;
+$breakpoint-desktop-md: 1440px !default;
+$breakpoint-desktop-lg: 1600px !default;
+$breakpoint-desktop-xl: 1920px !default;
+$breakpoint-desktop-xxl: 2560px !default;
+
+// Mobile max
+$breakpoint-mobile-xs-max: ($breakpoint-mobile-sm - 1px) !default;
+$breakpoint-mobile-sm-max: ($breakpoint-mobile-md - 1px) !default;
+$breakpoint-mobile-md-max: ($breakpoint-mobile-lg - 1px) !default;
+$breakpoint-mobile-lg-max: ($breakpoint-phablet-xs - 1px) !default;
+
+// Phablet max
+$breakpoint-phablet-xs-max: ($breakpoint-phablet-sm - 1px) !default;
+$breakpoint-phablet-sm-max: ($breakpoint-phablet-md - 1px) !default;
+$breakpoint-phablet-md-max: ($breakpoint-phablet-lg - 1px) !default;
+$breakpoint-phablet-lg-max: ($breakpoint-tablet-xs - 1px) !default;
+
+// Tablet max
+$breakpoint-tablet-xs-max: ($breakpoint-tablet-sm - 1px) !default;
+$breakpoint-tablet-sm-max: ($breakpoint-tablet-md - 1px) !default;
+$breakpoint-tablet-md-max: ($breakpoint-tablet-lg - 1px) !default;
+$breakpoint-tablet-lg-max: ($breakpoint-desktop-xs - 1px) !default;
+
+// Desktop max
+$breakpoint-desktop-xs-max: ($breakpoint-desktop-sm - 1px) !default;
+$breakpoint-desktop-sm-max: ($breakpoint-desktop-md - 1px) !default;
+$breakpoint-desktop-md-max: ($breakpoint-desktop-lg - 1px) !default;
+$breakpoint-desktop-lg-max: ($breakpoint-desktop-xl - 1px) !default;
+$breakpoint-desktop-xl-max: ($breakpoint-desktop-xxl - 1px) !default;
+
+// Animation timings
+// ============================================================
+$animation-timing-elastic: cubic-bezier(.835, -.005, .06, 1) !default;
+
+// Border radiuses
+// ============================================================
+$border-radius-xs: 3px !default;
+$border-radius-sm: 5px !default;
+$border-radius-lg: 8px !default;
+
+$border-radius-default: 8px !default;
+
+// Box shadows
+// ============================================================
+$box-shadow-1: 0 5px 5px rgba(0, 0, 0, 0.5) !default;
+
+// Component widths
+// ============================================================
+$field-width-default: 250px !default;
+$button-width-default: 150px !default;
+
+$modal-width-default: 340px !default;
+$score-width-default: 132px !default;
+
+// Component heights
+// ============================================================
+$field-height-default: 54px !default;
+$button-height-default: 54px !default;
+$score-height-default: 132px !default;
+
+$button-height-sm: 28px !default;
+$button-height-lg: 48px !default;
+
+// Spacings
+// ============================================================
+$spacing-mn: 5px;
+$spacing-tn: 10px;
+$spacing-xxs: 15px;
+$spacing-xs: 20px;
+$spacing-sm: 25px;
+$spacing-md: 30px;
+$spacing-lg: 35px;
+$spacing-xl: 40px;
+$spacing-xxl: 45px;
+$spacing-bg: 50px;
+$spacing-hg: 55px;
+$spacing-ms: 60px;
