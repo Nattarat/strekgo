@@ -23,7 +23,9 @@
 // Mixins
 // ============================================================
 @mixin container-variant(
-  $container-width: $breakpoint-mobile-lg
+  $max-width: $breakpoint-mobile-lg,
+  $min-height: 1px,
+  $padding: 0 $spacing-xs
 ) {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -33,7 +35,9 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  max-width: $container-width;
+  max-width: $max-width;
+  min-height: $min-height;
+  padding: $padding;
   margin: auto;
 
   // Child element styles
@@ -78,6 +82,57 @@
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
   @include container-variant();
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Default
+// ------------------------------------------------
+.container-with-line {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include container-variant(
+    $min-height: calc(100vh - 110px)
+  );
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>

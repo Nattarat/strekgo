@@ -22,7 +22,11 @@
 
 // Mixins
 // ============================================================
-@mixin background-container-variant() {
+@mixin background-container-variant(
+  $padding: 65px 0,
+  $background: url('#{$path-file-shares}/bg-main.jpg') no-repeat center bottom,
+  $line-position: absolute
+) {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -32,15 +36,15 @@
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
   min-height: 100vh;
-  padding: 65px $spacing-xs;
-  background: url('#{$path-file-shares}/bg-main.jpg') no-repeat center bottom;
+  padding: $padding;
+  background: $background;
   background-size: auto 58vh;
 
   &:before,
   &:after {
     content: ' ';
     display: block;
-    position: absolute;
+    position: $line-position;
     z-index: $z-index-1;
     left: 0;
     width: 100%;
@@ -105,6 +109,66 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Flexible
+// ------------------------------------------------
+.background-container-flexible {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include background-container-variant(
+    $padding: $spacing-sm 0,
+    $background: none,
+    $line-position: static
+  );
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  &:before {
+    margin-bottom: $spacing-xs;
+  }
+
+  &:after {
+    margin-top: $spacing-xs;
+  }
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>

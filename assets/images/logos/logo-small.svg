@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="58px" height="49px" viewBox="-0.037 -0.293 58 49" enable-background="new -0.037 -0.293 58 49"
+	 xml:space="preserve">
+<defs>
+</defs>
+<path fill="none" stroke="#F48120" stroke-width="2" stroke-miterlimit="10" d="M56.926,37.605c0,5.421-4.395,9.808-9.807,9.808
+	H10.806C5.389,47.413,1,43.026,1,37.605V10.806C1,5.391,5.389,1,10.806,1h36.313c5.412,0,9.807,4.391,9.807,9.806V37.605z"/>
+<path fill="#F48120" d="M23.52,42.912c0,1.852,0.693,2.316,2.081,1.424L52.564,25.63c1.354-0.923,1.354-1.922,0-2.848L25.601,4.077
+	c-1.388-0.893-2.081-0.429-2.081,1.428V42.912z"/>
+<text transform="matrix(1 0 0 1 4.3501 33.3716)" fill="#58595B" font-family="'PSL-Prathom'" font-size="34.5195">GO</text>
+<path fill="#58595B" d="M30.834,29.552c0,0.535,0.197,0.664,0.592,0.412l7.711-5.353c0.387-0.262,0.387-0.549,0-0.811l-7.711-5.349
+	c-0.395-0.255-0.592-0.122-0.592,0.409V29.552z"/>
+</svg>
