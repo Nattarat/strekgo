@@ -152,7 +152,7 @@
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
   @include background-container-variant(
-    $padding: $spacing-sm 0,
+    $padding: $spacing-xs 0,
     $background: none,
     $line-position: static
   );

@@ -17,7 +17,25 @@
   // >>>>>>>>>>>>>>>>>>>>>>>
   .register-segment {
     &.is-header {
+      padding-top: $spacing-tn;
+      margin-bottom: $spacing-xxl;
       text-align: center;
+    }
+
+    &.is-label-form {
+      margin-bottom: $spacing-xxs;
+    }
+
+    &.is-form {
+      margin-bottom: $spacing-xxs;
+
+      &:nth-last-of-type(2) {
+        margin-bottom: $spacing-lg;
+      }
+    }
+
+    &.is-button {
+      margin-bottom: $spacing-lg;
     }
   }
 

@@ -4,9 +4,7 @@
   "description": "แนวทางการเขียน SCSS สำหรับการพัฒนา Web Application โดยมีเป้าหมายเพื่อให้เกิดการเขียน Code ไปในทิศทางเดียวกัน ช่วยเสริมให้การ Learning, Debug, Refactor, Review, Feedback ของทีมทำได้สะดวกและรวดเร็วขึ้น โดย Guideline นี้จะมีลักษณะที่เขียน Style แยกออกมาเป็นไฟล์เดียวและ include เข้าไปที่ head โดยโปรเจคที่นำ Guideline นี้ไปใช้งาน ได้แก่ ASP.net, Magento, Symphony, Wordpress, Angular 1, None frontend framework เป็นต้น",
   "main": "main.js",
   "scripts": {
-    "start": "concurrently \"npm run sass\" \"npm run watch\" \"npm run serve\"",
-    "sass": "node-sass --include-path scss assets/sass/main.scss assets/css/main.css --indent-width 4 --output-style expanded --indent-type space",
-    "sass-watch": "npm run sass -- --watch",
+    "start": "concurrently \"npm run watch\" \"npm run serve\"",
     "watch": "npm run --watch",
     "serve": "lite-server"
   },

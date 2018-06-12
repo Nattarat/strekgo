@@ -91,17 +91,44 @@
             <span>สมัครสมาชิก</span>
           </h2>
         </div>
-
-
-
+        <div class="register-segment is-label-form">
+          <label class="text-label-form">บัญชีผู้ใช้งาน</label>
+        </div>
         <div class="register-segment is-form">
           <div class="panel-form">
             <div class="field"><!-- add class 'is-error' to display error UI and validation message -->
-              <input class="field-input" type="text" placeholder="ชื่อผู้ใช้งาน">
+              <input class="field-input" type="text" placeholder="อีเมล์*">
               <p class="field-message">error_text</p>
             </div>
-            <div class="field is-error"><!-- add class 'is-error' to display error UI and validation message -->
-              <input class="field-input" type="password" placeholder="รหัสผ่าน">
+            <div class="field"><!-- add class 'is-error' to display error UI and validation message -->
+              <input class="field-input" type="password" placeholder="รหัสผ่าน*">
+              <p class="field-message">error_text</p>
+            </div>
+            <div class="field"><!-- add class 'is-error' to display error UI and validation message -->
+              <input class="field-input" type="password" placeholder="ยืนยันรหัสผ่าน*">
+              <p class="field-message">error_text</p>
+            </div>
+          </div>
+        </div>
+        <div class="register-segment is-label-form">
+          <label class="text-label-form">ข้อมูลส่วนตัว</label>
+        </div>
+        <div class="register-segment is-form">
+          <div class="panel-form">
+            <div class="field"><!-- add class 'is-error' to display error UI and validation message -->
+              <input class="field-input" type="text" placeholder="ชื่อ*">
+              <p class="field-message">error_text</p>
+            </div>
+            <div class="field"><!-- add class 'is-error' to display error UI and validation message -->
+              <input class="field-input" type="password" placeholder="นามสกุล*">
+              <p class="field-message">error_text</p>
+            </div>
+            <div class="field"><!-- add class 'is-error' to display error UI and validation message -->
+              <input class="field-input" type="password" placeholder="วันเกิด*">
+              <p class="field-message">error_text</p>
+            </div>
+            <div class="field"><!-- add class 'is-error' to display error UI and validation message -->
+              <input class="field-input" type="password" placeholder="Line ID">
               <p class="field-message">error_text</p>
             </div>
           </div>
@@ -109,17 +136,9 @@
         <div class="register-segment is-button">
           <button class="button is-fluid" type="button">
             <span class="button-body">
-              <span class="button-text">register</span>
+              <span class="button-text">ถัดไป</span>
             </span>
           </button>
-        </div>
-        <div class="register-segment is-footer">
-          <div class="register-segment is-link-left">
-            <a href="#">ลืมรหัสผ่าน?</a>
-          </div>
-          <div class="register-segment is-link-left">
-            <a href="#">ยังไม่มีบัญชีผู้ใช้งาน?</a>
-          </div>
         </div>
       </form>
     </div>
