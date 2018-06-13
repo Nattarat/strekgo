@@ -52,7 +52,8 @@
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  .field-input {
+  .field-input,
+  .field-select {
     @include placeholder($color: $field-placeholder-color);
     @extend #{$field-text-style};
     width: 100%;
@@ -60,6 +61,10 @@
     padding: $field-padding;
     border: 0;
     color: $field-text-color;
+
+    &:focus {
+      outline: initial;
+    }
   }
 
   .field-message {
@@ -74,7 +79,8 @@
   &.is-error {
     border-bottom-color: $field-border-bottom-error-color;
 
-    .field-input {
+    .field-input,
+    .field-select {
       height: auto;
       padding-top: 10px;
     }
@@ -86,9 +92,34 @@
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-select {
+    position: relative;
+
+    &:after {
+      content: ' ';
+      @include translateY(-50%);
+      pointer-events: none;
+      position: absolute;
+      z-index: $z-index-1;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: $field-height-default;
+      height: $field-height-default;
+      background: $color-white url(#{$path-file-icons}/icon-arrow-select-menu.svg) no-repeat center;
+    }
+  }
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-error {
+    &.is-select {
+      &:after {
+        @include translateY(0);
+        top: 0;
+      }
+    }
+  }
 }
 
 // Browser variations
