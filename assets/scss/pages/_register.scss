@@ -15,10 +15,19 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
   .register-segment {
     &.is-header {
       padding-top: $spacing-tn;
       margin-bottom: $spacing-xxl;
+      text-align: center;
+    }
+
+    &.is-header-result {
+      padding-top: $spacing-tn;
+      margin-bottom: $spacing-sm;
       text-align: center;
     }
 
@@ -37,10 +46,21 @@
     &.is-button {
       margin-bottom: $spacing-lg;
     }
+
+    &.is-group-info {
+      margin-bottom: $spacing-mn;
+    }
+
+    &.is-label {
+      margin-bottom: $spacing-mn;
+    }
+
+    &.is-info {
+      padding-left: $spacing-xxs;
+      padding-right: $spacing-xxs;
+    }
   }
 
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
   .heading {
     @extend #{$text-style-first-lg-bold};
     position: relative;
@@ -54,6 +74,20 @@
     top: 50%;
     right: 100%;
     margin-right: 50px;
+
+    &.is-result {
+      margin-right: 20px;
+    }
+  }
+
+  [class*='text'] {
+    &.is-label {
+      color: $color-gray-5;
+    }
+
+    &.is-info {
+
+    }
   }
 
   // States
