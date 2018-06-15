@@ -43,12 +43,28 @@
       }
     }
 
-    &.is-button {
+    &.is-group-button {
       margin-bottom: $spacing-lg;
+    }
+
+    &.is-button {
+      // margin-bottom: $spacing-lg;
+    }
+
+    &.is-inner-button {
+      margin-bottom: $spacing-tn;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &.is-group-info {
       margin-bottom: $spacing-mn;
+
+      &:nth-last-of-type(2) {
+        margin-bottom: $spacing-tn;
+      }
     }
 
     &.is-label {

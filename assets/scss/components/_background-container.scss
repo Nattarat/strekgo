@@ -163,11 +163,13 @@
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
   &:before {
-    margin-bottom: $spacing-xs;
+    padding-top: $spacing-md;
+    background-position-y: top;
   }
 
   &:after {
-    margin-top: $spacing-xs;
+    padding-top: $spacing-lg;
+    background-position-y: bottom;
   }
 
   // Child element styles
