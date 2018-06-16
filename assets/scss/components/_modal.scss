@@ -1,0 +1,221 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Modal
+// * Structure & Detail
+// * Mixins
+// * Contextual variations
+//   - Default
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Structure & Detail
+// ============================================================
+/*
+<div class="modal">
+  Content here...
+</div>
+*/
+
+// Mixins
+// ============================================================
+@mixin modal-variant(
+  // Global in component
+  $modal-padding-side: $spacing-sm,
+  $modal-border-radius: $border-radius-lg,
+
+  // Container
+  $modal-container-width: $modal-width-default,
+  $modal-container-margin-side: $spacing-xl,
+  $modal-container-background-color: $color-white,
+
+  // Header
+  $modal-header-padding: 8px $modal-padding-side,
+
+  // Body
+  $modal-body-min-height: 135px
+) {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include transition($transition-default);
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  z-index: $z-index-2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .modal-container {
+    @include transition($transition-default);
+    @include translateY(-35%);
+    position: absolute;
+    z-index: $z-index-2;
+    top: 50%;
+    left: $modal-container-margin-side;
+    right: $modal-container-margin-side;
+    max-width: $modal-container-width;
+    margin: auto;
+    background-color: $modal-container-background-color;
+    border-radius: $modal-border-radius;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    z-index: $z-index-1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-overlay-1;
+  }
+
+  .modal-header {
+    padding: $modal-header-padding;
+    margin-top: -1px; // fix unknown spacing
+    background-color: $color-orange-1;
+    border-radius: $modal-border-radius $modal-border-radius 0 0;
+    text-align: center;
+  }
+
+  .modal-body {
+    min-height: $modal-body-min-height;
+    padding-left: $modal-padding-side;
+    padding-right: $modal-padding-side;
+    background-color: $color-white;
+
+    &.is-content-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &.is-content-spacebetween {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .modal-footer {
+    padding-bottom: $modal-padding-side;
+    padding-right: $modal-padding-side;
+    padding-left: $modal-padding-side;
+    background-color: $color-white;
+    border-radius: 0 0 $modal-border-radius $modal-border-radius;
+  }
+
+  .modal-segment {
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+
+    .modal-container {
+      @include translateY(-50%);
+    }
+  }
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Contextual variations
+// ============================================================
+
+// Default
+// ------------------------------------------------
+.modal {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include modal-variant();
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .modal-body {
+    &.for-forget-password {
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

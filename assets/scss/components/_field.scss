@@ -16,7 +16,15 @@
 // ============================================================
 /*
 <div class="field">
-  Content here...
+  <input class="field-input" type="text" placeholder="XXXXX">
+  <p class="field-message">XXXXX</p>
+</div>
+
+<div class="field is-select">
+  <select class="field-select" name="" id="">
+    <option value="">XXXXX</option>
+  </select>
+  <p class="field-message">XXXXX</p>
 </div>
 */
 
@@ -72,6 +80,7 @@
     display: none;
     padding: $field-message-padding;
     color: $field-message-text-color;
+    text-align: left;
   }
 
   // States
@@ -110,6 +119,15 @@
     }
   }
 
+  &.is-single-line {
+    border-bottom-color: $color-orange-1;
+
+    .field-input {
+      @extend #{$text-style-first-sm-bold};
+      height: auto;
+    }
+  }
+
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
   &.is-error {
@@ -118,6 +136,10 @@
         @include translateY(0);
         top: 0;
       }
+    }
+
+    &.is-single-line {
+      border-bottom-color: $color-red-1;
     }
   }
 }

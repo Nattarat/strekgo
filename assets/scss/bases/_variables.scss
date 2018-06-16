@@ -11,7 +11,8 @@
 // * Text styles
 // * Z indexs
 // * Breakpoints (Physical width of device screen)
-// * Animation timings
+// * Transition
+// * Transition timings
 // * Border width
 // * Border radiuses
 // * Box shadows
@@ -51,16 +52,10 @@ $color-gray-6: #58595B !default;
 $color-orange-1: #F58220 !default;
 $color-orange-2: #F08121 !default; // Font
 $color-orange-3: #B26014 !default;
+$color-orange-4: #FB9E4F !default;
 
 // Red
 $color-red-1: #FF0000 !default;
-
-// Pink
-$color-pink-1: #FF5684 !default;
-$color-pink-2: #F97FA0 !default;
-
-// Blue
-$color-blue-1: #08AAF1 !default;
 
 // Overlay
 $color-overlay-1: rgba(0, 0, 0, 0.5) !default;
@@ -182,9 +177,13 @@ $breakpoint-desktop-md-max: ($breakpoint-desktop-lg - 1px) !default;
 $breakpoint-desktop-lg-max: ($breakpoint-desktop-xl - 1px) !default;
 $breakpoint-desktop-xl-max: ($breakpoint-desktop-xxl - 1px) !default;
 
-// Animation timings
+// Transition
 // ============================================================
-$animation-timing-elastic: cubic-bezier(.835, -.005, .06, 1) !default;
+$transition-default: all 0.5s ease;
+
+// Transition timings
+// ============================================================
+$transition-timing-elastic: cubic-bezier(.835, -.005, .06, 1) !default;
 
 // Border width
 // ============================================================
@@ -214,8 +213,9 @@ $field-height-default: 54px !default;
 $button-height-default: 54px !default;
 $score-height-default: 132px !default;
 
-$button-height-sm: 28px !default;
-$button-height-lg: 48px !default;
+$button-height-sm: 45px !default;
+$button-height-md: 54px !default;
+$button-height-lg: 60px !default;
 
 // Spacings
 // ============================================================

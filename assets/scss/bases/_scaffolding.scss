@@ -24,7 +24,7 @@ body {
   font-family: $font-family-first-bold;
   font-size: $font-size-first-md;
   color: $color-gray-3;
-  line-height: $line-height-first-default;
+  // line-height: $line-height-first-default;
   letter-spacing: $letter-spacing-default;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,7 +46,7 @@ a {
 
   &:hover,
   &:focus {
-      color: $color-orange-1;
+    color: $color-orange-1;
   }
 
   &:active {

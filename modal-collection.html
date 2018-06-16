@@ -83,14 +83,116 @@
 </head>
 <body>
   <div class="background-container-flexible">
-    <div class="container-with-line"></div>
+    <div class="container-with-line">
+      <a id="button-modal-register-finished" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal register finished</span>
+        </span>
+      </a>
+      <a id="button-modal-forget-password" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal forget password</span>
+        </span>
+      </a>
+      <a id="button-modal-forget-password-finished" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal forget password finished</span>
+        </span>
+      </a>
+    </div>
   </div>
 
-  <div class="modal">Modal</div>
+  <!-- Register finished -->
+  <div id="modal-register-finished" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="text-first-md-bold is-white">สมัครสมาชิกใหม่</span>
+      </div>
+      <div class="modal-body is-content-center">
+        <span class="text-first-md-bold is-orange-1">สมัครสมาชิกใหม่เสร็จสมบูรณ์</span>
+      </div>
+      <div class="modal-footer">
+        <a class="button button-modal-close is-size-sm is-fluid" href="#">
+          <span class="button-body">
+            <span class="button-text">กลับหน้าหลัก</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Forget password -->
+  <div id="modal-forget-password" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="text-first-md-bold is-white">ลืมรหัสผ่าน?</span>
+      </div>
+      <div class="modal-body is-content-spacebetween for-forget-password">
+        <div class="modal-segment">
+          <span class="text-first-xs-bold is-orange-1">กรอกอีเมลที่สมัครเพื่อส่งรหัสผ่านใหม่</span>
+        </div>
+        <div class="modal-segment is-fluid">
+          <div class="field is-single-line">
+            <input class="field-input" type="text" placeholder="อีเมล์">
+            <p class="field-message">ส่งไปยังอีเมล์</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="button button-modal-close is-size-sm is-fluid" href="#">
+          <span class="button-body">
+            <span class="button-text">กลับหน้าหลัก</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Forget password finished -->
+  <div id="modal-forget-password-finished" class="modal">
+    <div class="modal-container">
+        <div class="modal-header">
+          <span class="text-first-md-bold is-white">ลืมรหัสผ่าน?</span>
+        </div>
+        <div class="modal-body is-content-center">
+          <span class="text-first-md-bold is-orange-1">ระบบจะทำการส่งรหัสใช้งานไปยัง <br> อีเมล์ที่แจ้งภายใน 5 นาที</span>
+        </div>
+        <div class="modal-footer">
+          <a class="button button-modal-close is-size-sm is-fluid" href="#">
+            <span class="button-body">
+              <span class="button-text">กลับหน้าหลัก</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    <div class="modal-overlay"></div>
+  </div>
 
   <script type="text/javascript" src="./../assets/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./../assets/js/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./../assets/js/is_js/is.min.js"></script>
   <script type="text/javascript" src="./../assets/js/main.js"></script>
+  <script type="text/javascript">
+    // Modal open
+    // ============================================================
+    $(function() {
+      // Open modal register finished
+      $('#button-modal-register-finished').on("click", function() {
+          $('#modal-register-finished').addClass('is-open');
+      });
+
+      // Open modal forget password
+      $('#button-modal-forget-password').on("click", function() {
+          $('#modal-forget-password').addClass('is-open');
+      });
+
+      // Open modal forget password finished
+      $('#button-modal-forget-password-finished').on("click", function() {
+          $('#modal-forget-password-finished').addClass('is-open');
+      });
+    });
+  </script>
 </body>
 </html>
