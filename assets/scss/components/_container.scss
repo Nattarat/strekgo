@@ -125,7 +125,7 @@
 // Chrome Android
 .chrome-mobile {}
 
-// Default
+// Line
 // ------------------------------------------------
 .container-with-line {
   // Mixins
@@ -139,6 +139,60 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Content
+// ------------------------------------------------
+.container-content {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include container-variant(
+    $padding: 0
+  );
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  overflow: auto;
+  margin-top: $topbar-height;
+  height: calc(100vh - #{$topbar-height} - #{$navigationbar-height});
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>

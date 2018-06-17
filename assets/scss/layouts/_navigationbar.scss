@@ -1,12 +1,12 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
 //
-// Top bar
+// Navigation bar
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 
-.topbar {
+.navigationbar {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
 
@@ -17,56 +17,39 @@
   // >>>>>>>>>>>>>>>>>>>>>>>
   position: fixed;
   z-index: $z-index-3;
-  top: 0;
+  bottom: 0;
   right: 0;
   left: 0;
+
+  overflow-x: auto;
   display: flex;
-  justify-content: space-between;
-  height: $topbar-height;
+
   max-width: $breakpoint-mobile-lg;
+  height: $navigationbar-height;
   margin: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  .topbar-info {
+  .navigation-button {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: calc(100% - 105px);
-    padding-top: 3px;
-    padding-left: $spacing-xxs;
-    padding-right: $spacing-xs;
-  }
-
-  .topbar-point {
-    display: flex;
+    flex: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 105px;
-    padding-left: $spacing-xs;
-    padding-right: $spacing-xs;
+    width: $navigation-button-width;
     background-color: $color-orange-1;
+
+    &.is-active {
+      background-color: $color-orange-3;
+    }
   }
 
-  .topbar-segment {
-
-  }
-
-  [class*='text'] {
-    &.for-point-number,
-    &.for-point-unit {
-      position: relative;
-    }
-
-    &.for-point-number {
-      top: 3px;
-    }
-
-    &.for-point-unit {
-      top: -3px;
-    }
+  .navigation-icon {
+    margin-bottom: $spacing-mn;
   }
 
   // States
