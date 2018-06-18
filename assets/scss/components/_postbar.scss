@@ -1,0 +1,155 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Postbar
+// * Structure & Detail
+// * Mixins
+// * Contextual variations
+//   - Default
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Structure & Detail
+// ============================================================
+/*
+<div class="postbar">
+  Content here...
+</div>
+*/
+
+// Mixins
+// ============================================================
+@mixin postbar-variant(
+) {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-gray-1;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .postbar-info,
+  .postbar-action {
+    padding-left: $spacing-xxs;
+    padding-right: $spacing-xxs;
+  }
+
+  .postbar-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .postbar-segment {
+    &.is-meta {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .logo {
+
+  }
+
+  .logo-outline {
+    margin-top: 3px;
+  }
+
+  .datetime {
+    @extend #{$text-style-first-tn-bold};
+    width: 100%;
+    margin-top: 5px;
+    color: $color-gray-4;
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Contextual variations
+// ============================================================
+
+// Default
+// ------------------------------------------------
+.postbar {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include postbar-variant();
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
