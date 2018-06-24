@@ -101,6 +101,14 @@
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  // Sizes
+  &.is-sm {
+    .field-input,
+    .field-select {
+      height: $field-height-sm;
+    }
+  }
+
   &.is-select {
     position: relative;
 
@@ -126,6 +134,10 @@
       @extend #{$text-style-first-sm-bold};
       height: auto;
     }
+  }
+
+  &.is-border {
+    border: 1px solid $color-orange-1;
   }
 
   // States with modifiers

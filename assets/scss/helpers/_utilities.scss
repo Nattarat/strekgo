@@ -3,6 +3,7 @@
 //
 // Utilities
 // * Width
+// * Flex
 // * Ellipsis
 // * Word break
 // * Typography
@@ -16,10 +17,28 @@
   width: 100%;
 }
 
+// Flex
+// ============================================================
+.is-flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-flex-spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 // Ellipsis
 // ============================================================
 .is-ellipsis {
   @include ellipsis();
+}
+
+.is-nowrap {
+  white-space: nowrap;
 }
 
 // Word break
@@ -39,5 +58,5 @@
 // Label form
 .text-label-form {
   @extend #{$text-style-first-md-bold};
-  color: $color-gray-5;
+  color: $color-gray-6;
 }

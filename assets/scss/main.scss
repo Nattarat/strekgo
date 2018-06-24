@@ -36,6 +36,11 @@
 @import 'components/container';
 @import 'components/modal';
 @import 'components/postbar';
+@import 'components/card';
+@import 'components/score';
+@import 'components/list';
+@import 'components/thumbnail';
+@import 'components/table';
 
 // Collections
 // ============================================================
@@ -45,6 +50,7 @@
 // ============================================================
 @import 'layouts/topbar';
 @import 'layouts/navigationbar';
+@import 'layouts/footerbutton';
 
 // Pages
 // ============================================================
@@ -52,3 +58,6 @@
 @import 'pages/splash-screen';
 @import 'pages/login';
 @import 'pages/register';
+@import 'pages/scan';
+@import 'pages/reward';
+@import 'pages/profile';

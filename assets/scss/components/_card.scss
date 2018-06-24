@@ -1,13 +1,11 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
 //
-// Medias
+// Card
 // * Structure & Detail
 // * Mixins
 // * Contextual variations
-//   - Ratio 16:9
-//   - Ratio 4:3
-//   - Ratio 1:1 (Square)
+//   - Default
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -17,30 +15,14 @@
 // Structure & Detail
 // ============================================================
 /*
-<div class="media-16-9">
-  <img src="..." alt="...">
-</div>
-
-<div class="media-16-9">
-  <video controls>
-    <source src="..." type="video/mp4">
-  </video>
-</div>
-
-<div class="media-4-3 is-full-height">
-  <img src="..." alt="...">
-</div>
-
-<div class="media-16-9 is-youtube">
-  <iframe width="..." height="..." src="..." frameborder="0" allow="autoplay; encrypted-media"
-    allowfullscreen></iframe>
+<div class="card">
+  Content here...
 </div>
 */
 
 // Mixins
 // ============================================================
-@mixin media-variant(
-  $image-height-ratio: 56.25% // 16:9
+@mixin card-variant(
 ) {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -50,50 +32,15 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  overflow: hidden;
-  position: relative;
-  padding-bottom: $image-height-ratio;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  img,
-  iframe,
-  video {
-    @include translateY(-50%);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: $z-index-1;
-    max-width: none;
-    width: 100%;
-    height: auto;
-  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
-  // this class use to fulfill image height in container but may have left-right spacing
-  &.is-full-height {
-    img,
-    iframe,
-    video {
-      @include translateX(-50%);
-      top: 0;
-      left: 50%;
-      width: auto;
-      height: 100%;
-    }
-  }
-
-  &.is-youtube {
-    iframe {
-      @include translateY(0);
-      top: 0;
-      height: 100%;
-    }
-  }
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -122,12 +69,12 @@
 // Contextual variations
 // ============================================================
 
-// 16:9
+// Default
 // ------------------------------------------------
-.media-16-9 {
+.card {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include media-variant();
+  @include card-variant();
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -171,23 +118,55 @@
 // Chrome Android
 .chrome-mobile {}
 
-// 4:3
+// News
 // ------------------------------------------------
-.media-4-3 {
+.card-news {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include media-variant(
-    $image-height-ratio: 75%
-  );
+  @include card-variant();
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  position: relative;
+
+  &:first-child {
+    .postbar {
+      &:before {
+        display: none;
+      }
+    }
+  }
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .card-image {
+    position: relative;
+    background-color: $color-black;
+  }
+
+  .card-button {
+    position: absolute;
+    z-index: $z-index-1;
+
+    &.is-purchase {
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+
+      .button {
+        min-width: 240px;
+      }
+    }
+
+    &.is-video {
+      @include translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -222,31 +201,183 @@
 // Chrome Android
 .chrome-mobile {}
 
-// 1:1
+// News
 // ------------------------------------------------
-.media-square {
+.card-news {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include media-variant(
-    $image-height-ratio: 100%
-  );
+  @include card-variant();
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  position: relative;
+
+  &:first-child {
+    .postbar {
+      &:before {
+        display: none;
+      }
+    }
+  }
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .card-image {
+    position: relative;
+    background-color: $color-black;
+  }
+
+  .card-button {
+    position: absolute;
+    z-index: $z-index-1;
+
+    &.is-purchase {
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+
+      .button {
+        min-width: 240px;
+      }
+    }
+
+    &.is-video {
+      @include translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
-  &.is-circle {
-    border-radius: 50%;
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Product
+// ------------------------------------------------
+.card-product {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include card-variant();
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  display: flex;
+  margin-bottom: 2px;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .product-image {
+    position: relative;
+    width: 30%;
+
+    .label {
+      position: absolute;
+      z-index: $z-index-1;
+      top: 3px;
+      left: 3px;
+    }
+  }
+
+  .product-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    padding-right: 50px;
+    padding-left: 15px;
+    background-color: $color-gray-2;
+
+    // Arrow
+    &:after {
+      @include translateY(-50%);
+      content: ' ';
+      position: absolute;
+      z-index: $z-index-1;
+      top: 50%;
+      right: 17px;
+      width: 15px;
+      height: 27px;
+      background: url('#{$path-file-icons}/icon-next.svg') no-repeat;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .logo {
+      max-width: 50px;
+      margin-right: 5px;
+    }
+
+    .name {
+      @extend .is-ellipsis;
+      @extend #{$text-style-second-xxs};
+      max-width: 165px;
+      padding-right: 5px;
+      color: $color-white;
+    }
+
+    .description {
+      @extend .is-ellipsis;
+      @extend #{$text-style-second-tn};
+      max-width: 215px;
+      color: $color-white;
+    }
+
+    .point {
+      @extend #{$text-style-first-lg-bold};
+      color: $color-orange-1;
+    }
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  &:nth-child(even) {
+    .product-info {
+      background-color: $color-gray-1;
+    }
   }
 
   // States with modifiers
@@ -254,57 +385,33 @@
 
   // Media queries
   // >>>>>>>>>>>>>>>>>>>>>>>
-}
+  .product-info {
+    .logo {
+      @media (max-width: $breakpoint-mobile-lg) {
+        max-width: 12vw;
+      }
+    }
 
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE 10-11
-.ie {}
+    .name {
+      @media (max-width: $breakpoint-mobile-lg) {
+        max-width: calc(39.8vw - 15px);
+        font-size: 4.9vw;
+      }
+    }
 
-// Edge
-.edge {}
+    .description {
+      @media (max-width: $breakpoint-mobile-lg) {
+        max-width: calc(51vw - 15px);
+        font-size: 2.9vw;
+      }
+    }
 
-// Safari mac
-.safari {}
-
-// Firefox
-.firefox {}
-
-// Safari iPhone/iPad
-.safari-mobile {}
-
-// Chrome Android
-.chrome-mobile {}
-
-// 13:8
-// ------------------------------------------------
-.media-13-8 {
-  // Mixins
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include media-variant(
-    $image-height-ratio: 62%
-  );
-
-  // Helpers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Parent styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States with modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Media queries
-  // >>>>>>>>>>>>>>>>>>>>>>>
+    .point {
+      @media (max-width: $breakpoint-mobile-lg) {
+        font-size: 6.8vw;
+      }
+    }
+  }
 }
 
 // Browser variations

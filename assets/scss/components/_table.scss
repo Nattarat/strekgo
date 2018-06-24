@@ -1,7 +1,7 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
 //
-// Panel
+// Table
 // * Structure & Detail
 // * Mixins
 // * Contextual variations
@@ -15,15 +15,14 @@
 // Structure & Detail
 // ============================================================
 /*
-<div class="panel">
+<div class="table">
   Content here...
 </div>
 */
 
 // Mixins
 // ============================================================
-@mixin panel-variant(
-  $panel-border: 0
+@mixin table-variant(
 ) {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -33,10 +32,78 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  border: $panel-border;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .table-head-col,
+  .table-col {
+    text-align: center;
+
+    // History point
+    &.is-date {
+      width: 20%;
+    }
+
+    &.is-brand {
+      width: 15%;
+    }
+
+    &.is-serial {
+      width: 35%;
+    }
+
+    &.is-point {
+      width: 30%;
+    }
+
+    // History reward
+    &.is-history-date {
+      width: 25%;
+    }
+
+    &.is-reward {
+      width: 50%;
+    }
+
+    &.is-used-point {
+      width: 25%;
+    }
+  }
+
+  .table-head {
+    .table-row {
+      background-color: $color-gray-4;
+    }
+  }
+
+  .table-head-col {
+    .text {
+      @extend #{$text-style-first-sm-bold};
+      color: $color-white;
+    }
+  }
+
+  .table-body {
+    .table-row {
+      display: flex;
+      background-color: $color-gray-2;
+
+      &:nth-child(even) {
+        background-color: $color-gray-1;
+      }
+    }
+  }
+
+  .table-col {
+    .text {
+      @extend #{$text-style-first-xs-bold};
+      color: $color-gray-4;
+    }
+  }
+
+  .table-row {
+    display: flex;
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -46,6 +113,24 @@
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .table-head-col {
+    .text {
+      @media (max-width: $breakpoint-mobile-lg) {
+        font-size: 5.8vw;
+      }
+    }
+  }
+
+  .table-col {
+    .text {
+      @media (max-width: $breakpoint-mobile-lg) {
+        font-size: 5.4vw;
+      }
+    }
+  }
 }
 
 // Browser variations
@@ -73,120 +158,16 @@
 
 // Default
 // ------------------------------------------------
-.panel {
+.table {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant();
+  @include table-variant();
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States with modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Media queries
-  // >>>>>>>>>>>>>>>>>>>>>>>
-}
-
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE 10-11
-.ie {}
-
-// Edge
-.edge {}
-
-// Safari mac
-.safari {}
-
-// Firefox
-.firefox {}
-
-// Safari iPhone/iPad
-.safari-mobile {}
-
-// Chrome Android
-.chrome-mobile {}
-
-// Form
-// ------------------------------------------------
-.panel-form {
-  // Mixins
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant(
-    $panel-border: $border-width-mn solid $color-gray-4
-  );
-
-  // Helpers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Parent styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  border-bottom: 0;
-
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States with modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Media queries
-  // >>>>>>>>>>>>>>>>>>>>>>>
-}
-
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE 10-11
-.ie {}
-
-// Edge
-.edge {}
-
-// Safari mac
-.safari {}
-
-// Firefox
-.firefox {}
-
-// Safari iPhone/iPad
-.safari-mobile {}
-
-// Chrome Android
-.chrome-mobile {}
-
-// List
-// ------------------------------------------------
-.panel-list {
-  // Mixins
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant(
-    $panel-border: $border-width-mn solid $color-orange-1
-  );
-
-  // Helpers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Parent styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  margin-bottom: 10px;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>

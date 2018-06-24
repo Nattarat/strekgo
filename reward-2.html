@@ -84,9 +84,11 @@
 <body>
   <!-- Topbar -->
   <div class="topbar">
-    <div class="topbar-info">
-      <span class="text-first-lg-bold is-orange-1 is-ellipsis" title="ศิริชัย  ลาภมหานนท์">ศิริชัย  ลาภมหานนท์</span>
-      <span class="text-first-sm-bold is-gray-4 is-ellipsis" title="ร้าน Young IT">ร้าน Young IT</span>
+    <div class="topbar-back">
+      <a class="button-back" href="#">
+        <img src="./assets/images/icons/icon-back.png" alt="Icon">
+      </a>
+      <span class="text-first-bg-bold is-orange-1 is-nowrap">รางวัลทั้งหมด</span>
     </div>
     <div class="topbar-point">
       <span class="text-first-hg-bold is-white for-point-number">9999</span>
@@ -95,96 +97,66 @@
   </div>
 
   <div class="container-content">
-    <!-- Product -->
-    <div class="card-news">
-      <div class="postbar">
-        <div class="postbar-info">
-          <div class="postbar-segment is-logo">
-            <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
-          </div>
-          <div class="postbar-segment is-meta">
-            <img class="logo-outline" src="./assets/images/logos/logo-text-outline.svg" alt="Logo">
-            <div class="datetime">โพสต์ 1 พศจิกายน 2561 เวลา 15.00 น.</div>
-          </div>
+    <div class="postbar is-light-theme">
+      <div class="postbar-info">
+        <div class="postbar-segment is-logo">
+          <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
         </div>
-        <div class="postbar-action">
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank">
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-download.svg" alt="Icon">
-                <span class="button-text">Download</span>
-              </span>
-            </a>
-          </div>
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank"><!-- add class 'is-active' to display keeped status -->
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-keep.svg" alt="Icon">
-                <span class="button-text">Keep</span>
-              </span>
-            </a>
-          </div>
+        <div class="postbar-segment is-meta is-meta-short">
+          <span class="username" title="ศิริชัย  ลาภมหานนท์">ศิริชัย ลาภมหานนท์</span>
+          <span class="shopname" title="ร้าน Young IT">ร้าน Young IT</span>
         </div>
       </div>
-      <div class="card-image">
-        <img src="./assets/images/contents/cover-news-1.png" alt="News cover">
-      </div>
-      <div class="card-button is-purchase">
-        <a class="button is-xs is-orange-transparent is-border-radius-lg" href="#">
-          <span class="button-body">
-            <span class="button-text">สนใจสั่งซื้อสินค้า</span>
-          </span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Video -->
-    <div class="card-news">
-      <div class="postbar">
-        <div class="postbar-info">
-          <div class="postbar-segment is-logo">
-            <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
-          </div>
-          <div class="postbar-segment is-meta">
-            <img class="logo-outline" src="./assets/images/logos/logo-text-outline.svg" alt="Logo">
-            <div class="datetime">โพสต์ 1 พศจิกายน 2561 เวลา 15.00 น.</div>
-          </div>
-        </div>
-        <div class="postbar-action">
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank">
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-download.svg" alt="Icon">
-                <span class="button-text">Download</span>
-              </span>
-            </a>
-          </div>
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank"><!-- add class 'is-active' to display keeped status -->
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-keep.svg" alt="Icon">
-                <span class="button-text">Keep</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="card-image">
-        <img src="./assets/images/contents/cover-news-2.jpg" alt="News cover">
-        <div class="card-button is-video">
-          <a class="button is-flexible is-transparent" href="#">
-            <span class="button-body">
-              <img class="button-icon" src="./assets/images/icons/icon-play-video.svg" alt="Icon">
+      <div class="postbar-action is-single-button">
+        <div class="postbar-segment is-button">
+          <a class="button-circle" href="#" target="_blank">
+            <span class="button-body is-flex-center-all">
+              <span class="text-first-mn-bold is-white">ตัวกรอง</span>
+              <span class="text-first-mn-bold is-white">รางวัล</span>
             </span>
           </a>
         </div>
       </div>
     </div>
+    <div class="reward-list">
+      <a class="card-product" href="#">
+        <div class="product-image">
+          <div class="media-13-8">
+            <img src="./assets/images/contents/product-1.jpg" alt="Product">
+          </div>
+          <img class="label" src="./assets/images/icons/icon-new.svg" alt="Product Label">
+        </div>
+        <div class="product-info">
+          <div class="header">
+            <img class="logo" src="./assets/images/logos/logo-product-1.png" alt="Logo">
+            <span class="name" title="iPhone X 256 GB">iPhone X 256 GB</span>
+          </div>
+          <div class="description">GBT GTX1070 AORUS 8G D5 256Bit</div>
+          <div class="point">35000 คะแนน</div>
+        </div>
+      </a>
+      <a class="card-product" href="#">
+        <div class="product-image">
+          <div class="media-13-8">
+            <img src="./assets/images/contents/product-1.jpg" alt="Product">
+          </div>
+          <img class="label" src="./assets/images/icons/icon-new.svg" alt="Product Label">
+        </div>
+        <div class="product-info">
+          <div class="header">
+            <span class="name" title="iPhone X 256 GB">iPhone X 256 GB</span>
+            <img class="logo" src="./assets/images/logos/logo-product-1.png" alt="Logo">
+          </div>
+          <div class="description">GBT GTX1070 AORUS 8G D5 256Bit</div>
+          <div class="point">35000 คะแนน</div>
+        </div>
+      </a>
+    </div>
   </div>
 
   <!-- Navigation bar -->
   <div class="navigationbar">
-      <a class="navigation-button is-active" href="#"><!-- add class 'is-active' to display selected status -->
+      <a class="navigation-button" href="#"><!-- add class 'is-active' to display selected status -->
         <img class="navigation-icon" src="./assets/images/icons/icon-news.svg" alt="Icon">
         <span class="text-first-xs-bold is-white">ข่าวสาร</span>
       </a>
@@ -192,7 +164,7 @@
         <img class="navigation-icon" src="./assets/images/icons/icon-scan.svg" alt="Icon">
         <span class="text-first-xs-bold is-white">แสกนสินค้า</span>
       </a>
-      <a class="navigation-button" href="#">
+      <a class="navigation-button is-active" href="#">
         <img class="navigation-icon" src="./assets/images/icons/icon-reward.svg" alt="Icon">
         <span class="text-first-xs-bold is-white">แลกรางวัล</span>
       </a>

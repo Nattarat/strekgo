@@ -1,0 +1,180 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Reward
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+.reward {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  padding-top: 45px;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+.reward-control {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  display: flex;
+  padding-top: 95px;
+  margin-left: -20px;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .reward-control-col {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+.reward-detail {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .product-image {
+    position: relative;
+    padding: 8px;
+    background-color: $color-gray-1;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      z-index: $z-index-2;
+      bottom: 100%;
+      right: 0;
+      display: block;
+      width: 46px;
+      height: 13px;
+      background: url('#{$path-file-shares}/line-product-top-square.svg') no-repeat;
+    }
+  }
+
+  .product-point {
+    display: flex;
+    height: 60px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    background-color: $color-gray-1;
+
+    .label {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-white;
+    }
+
+    .point {
+      display: flex;
+      flex: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 25px;
+      background-color: $color-orange-1;
+
+      .number {
+        @extend #{$text-style-first-hg-bold};
+        position: relative;
+        top: 4px;
+        color: $color-white;
+      }
+
+      .unit {
+        @extend #{$text-style-first-md-bold};
+        position: relative;
+        top: -5px;
+        color: $color-white;
+      }
+    }
+  }
+
+  .product-info {
+    .title {
+
+    }
+
+    .description {
+
+    }
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

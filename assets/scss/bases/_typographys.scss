@@ -183,6 +183,10 @@
     font-size: $font-size-first-hg;
   }
 
+  &.is-size-first-ms {
+    font-size: $font-size-first-ms;
+  }
+
   // Size > Second
   &.is-size-second-mn {
     font-size: $font-size-second-mn;
@@ -199,6 +203,11 @@
   // Text transforms
   &.is-uppercase {
     text-transform: uppercase;
+  }
+
+  // Line height
+  &.is-single-line {
+    line-height: 1;
   }
 
   // 'Bold' not write in mixin because font-family maybe have more than one. See example case below
@@ -402,6 +411,20 @@
         $text-display: inline-block,
         $text-font-family: $font-family-first-bold,
         $text-font-size: $font-size-first-hg,
+        $text-line-height: $line-height-first-default,
+        $text-letter-spacing: $letter-spacing-default
+      );
+    }
+  }
+
+  // Massive
+  // Class name: .text-first-ms
+  &-ms {
+    &-bold {
+      @include text-variant(
+        $text-display: inline-block,
+        $text-font-family: $font-family-first-bold,
+        $text-font-size: $font-size-first-ms,
         $text-line-height: $line-height-first-default,
         $text-letter-spacing: $letter-spacing-default
       );

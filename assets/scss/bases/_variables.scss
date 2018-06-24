@@ -79,6 +79,7 @@ $font-size-first-xl: 30px !default;
 $font-size-first-xxl: 34px !default;
 $font-size-first-bg: 38px !default;
 $font-size-first-hg: 42px !default;
+$font-size-first-ms: 80px !default;
 
 // Second
 $font-size-second-mn: 10px !default; // New label
@@ -110,6 +111,7 @@ $text-style-first-xl-bold: '.text-first-xl-bold' !default;
 $text-style-first-xxl-bold: '.text-first-xxl-bold' !default;
 $text-style-first-bg-bold: '.text-first-bg-bold' !default;
 $text-style-first-hg-bold: '.text-first-hg-bold' !default;
+$text-style-first-ms-bold: '.text-first-ms-bold' !default;
 
 // Second Regular
 $text-style-second-mn: '.text-second-mn' !default;
@@ -188,6 +190,7 @@ $transition-timing-elastic: cubic-bezier(.835, -.005, .06, 1) !default;
 // Border width
 // ============================================================
 $border-width-mn: 1px !default;
+$border-width-tn: 2px !default;
 
 // Border radiuses
 // ============================================================
@@ -205,16 +208,21 @@ $field-width-default: 250px !default;
 $button-width-default: 150px !default;
 
 $modal-width-default: 340px !default;
-$navigation-button-width: 105px !default;
+$navigation-button-width: 25% !default; // 105px
+$score-width: 132px !default;
 
 // Component heights
 // ============================================================
 $field-height-default: 54px !default;
+$field-height-sm: 42px !default;
 $button-height-default: 54px !default;
 $topbar-height: 60px !default;
+$topbar-title-height: 80px !default;
 $navigationbar-height: 74px !default;
 $postbar-height: 84px !default;
+$score-height: $score-width !default;
 
+$button-height-xs: 32px !default;
 $button-height-sm: 45px !default;
 $button-height-md: 54px !default;
 $button-height-lg: 60px !default;

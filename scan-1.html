@@ -23,8 +23,8 @@
   <meta name="rating" content="General">
   <!-- Disable automatic detection and formatting of possible phone numbers -->
   <meta name="format-detection" content="telephone=no">
-  <!-- Favicons: IE 10 -->
-  <link rel="icon" href="./../assets/images/favicons/favicon.ico" sizes="32x32" type="image/ico">
+  <!-- Favicons: IE 9, IE 10 -->
+  <link rel="icon" sizes="32x32" type="image/ico" href="./../assets/images/favicons/favicon.ico">
   <!-- Favicons: IE 11, Chrome, Firefox, Safari, Opera -->
   <link rel="icon" sizes="48x48" type="image/png" href="./../assets/images/favicons/favicon@xs.png">
   <link rel="icon" sizes="96x96" type="image/png" href="./../assets/images/favicons/favicon@sm.png">
@@ -42,6 +42,10 @@
   <meta name="msapplication-wide310x150logo" content="./../assets/images/favicons/ms-application-wide.png">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="./../assets/css/main.min.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
   <!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <!--
@@ -76,59 +80,27 @@
   <meta itemprop="description" content="S-TREK GO_less_than_200_characters"/>
   <meta itemprop="image" content="https://example.com/GooglePlus_Cover_Timeline_Image.jpg"/>
   -->
-
-  <style>
-    .partition-line {
-      position: relative;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border-top: 0;
-    }
-
-    .partition-line:before {
-      content: ' ';
-      position: absolute;
-      z-index: 1;
-      width: 100%;
-      height: 1px;
-      background-color: #EEEEEE;
-    }
-  </style>
 </head>
 <body>
-  <button class="button is-sm" type="button" onclick="">
-    <span class="button-body">
-      <span class="button-text">Small size</span>
-    </span>
-  </button>
-  <button class="button" type="button" onclick="">
-    <span class="button-body">
-      <span class="button-text">Default size</span>
-    </span>
-  </button>
-  <button class="button is-lg" type="button" onclick="">
-    <span class="button-body">
-      <span class="button-text">Large size</span>
-    </span>
-  </button>
-  <hr class="partition-line">
-  <button class="button is-flexible" type="button" onclick="">
-    <span class="button-body">
-      <span class="button-text">Flexible</span>
-    </span>
-  </button>
-  <hr class="partition-line">
-  <button class="button is-fluid" type="button" onclick="">
-    <span class="button-body">
-      <span class="button-text">Fluid</span>
-    </span>
-  </button>
-  <hr class="partition-line">
-  <button class="button-primary" type="button" onclick="">
-    <span class="button-body">
-      <span class="button-text">Primary button</span>
-    </span>
-  </button>
+  <!-- Topbar -->
+  <div class="topbar is-title">
+    <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
+    <span class="title text-first-lg-bold is-orange-1">แสกนสินค้า</span>
+  </div>
+
+  <div class="container-content is-except-topbar-title is-flex-center-all">
+    <div class="scan">
+      <img class="barcode" src="./assets/images/contents/barcode.gif" alt="Barcode">
+    </div>
+    <div class="scan-control">
+      <a class="button-shot" href="#">
+        <img src="./assets/images/icons/icon-shot.svg" alt="Icon">
+      </a>
+      <a class="button-close" href="#">
+        <img src="./assets/images/icons/icon-close.svg" alt="Icon">
+      </a>
+    </div>
+  </div>
 
   <script type="text/javascript" src="./../assets/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./../assets/js/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>

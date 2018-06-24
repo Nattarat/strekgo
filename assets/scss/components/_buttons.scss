@@ -6,7 +6,7 @@
 // * Mixins
 // * Contextual variations
 //   - Default
-//   - Primary
+//   - Circle
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -37,6 +37,7 @@
   // Body
   $button-width: $button-width-default,
   $button-height: $button-height-default,
+  $button-height-extra-small: $button-height-xs,
   $button-height-small: $button-height-sm,
   $button-height-large: $button-height-lg,
   $button-padding: 0 10px,
@@ -53,6 +54,7 @@
 
   // Text
   $button-text-style: $text-style-first-sm-bold,
+  $button-text-style-extra-small: $text-style-first-xs-bold,
   $button-text-style-small: $text-style-first-sm-bold,
   $button-text-style-large: $text-style-first-lg-bold,
   $button-text-color: $color-white,
@@ -113,6 +115,14 @@
   .button-text {
     @extend #{$button-text-style};
     color: $button-text-color;
+
+    &.is-lg {
+      font-size: $font-size-first-lg;
+    }
+
+    &.is-bg {
+      font-size: $font-size-first-bg;
+    }
   }
 
   // States
@@ -137,10 +147,27 @@
     outline: none;
   }
 
+  &.is-disable {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
   // Sizes
-  &.is-size-sm {
+  // &.is-flexible {
+  //   height: auto;
+  // }
+
+  &.is-xs {
+    height: $button-height-extra-small;
+
+    .button-text {
+      @extend #{$button-text-style-extra-small};
+    }
+  }
+
+  &.is-sm {
     height: $button-height-small;
 
     .button-text {
@@ -148,12 +175,34 @@
     }
   }
 
-  &.is-size-lg {
+  &.is-lg {
     height: $button-height-large;
 
     .button-text {
       @extend #{$button-text-style-large};
     }
+  }
+
+  // Border radius
+  &.is-border-radius-xs {
+    border-radius: $border-radius-xs;
+  }
+
+  &.is-border-radius-sm {
+    border-radius: $border-radius-sm;
+  }
+
+  &.is-border-radius-lg {
+    border-radius: $border-radius-lg;
+  }
+
+  // Color
+  &.is-transparent {
+    background-color: transparent;
+  }
+
+  &.is-orange-transparent {
+    background-color: rgba(245, 130, 32, 0.8);
   }
 
   // Structures
@@ -219,6 +268,106 @@
 
   // Media queries
   // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+
+// Circle
+// ------------------------------------------------
+.button-circle {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include button-variant(
+    $button-width: 12.6vw,
+    $button-height: 12.6vw,
+    $button-padding: 0,
+    $button-border-radius: 50%,
+
+    // Text
+    $button-text-style: $text-style-first-mn-bold
+  );
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .button-body {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.is-flex-center-all {
+      justify-content: center;
+    }
+  }
+
+  .button-icon {
+    width: 4.8vw; // 5.1
+    margin-top: 1.7vw;
+  }
+
+  .button-text {
+    position: absolute;
+    z-index: $z-index-1;
+    bottom: 8px;
+    font-size: 3.4vw;
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-active {
+    background-color: $color-orange-3;
+  }
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @media (min-width: 415px) {
+    min-width: 52px;
+    height: 52px;
+  }
+
+  .button-icon {
+    @media (min-width: 415px) {
+      width: 21px;
+      margin-top: 7px;
+    }
+  }
+
+  .button-text {
+    @media (min-width: 415px) {
+      font-size: 14px;
+    }
+  }
 }
 
 // Browser variations

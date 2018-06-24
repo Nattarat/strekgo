@@ -1,0 +1,74 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Footer button
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+.footer-button {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  position: fixed;
+  z-index: $z-index-3;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  overflow-x: auto;
+  display: flex;
+  max-width: $breakpoint-mobile-lg;
+  height: $button-height-default;
+  margin: auto;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .footer-button-inner {
+    display: flex;
+    flex: 1;
+    margin-left: -1px;
+
+    .button {
+      flex: 1;
+      margin-left: 1px;
+    }
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

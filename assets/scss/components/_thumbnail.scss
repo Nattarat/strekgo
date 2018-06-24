@@ -1,7 +1,7 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
 //
-// Panel
+// Thumbnail
 // * Structure & Detail
 // * Mixins
 // * Contextual variations
@@ -15,15 +15,14 @@
 // Structure & Detail
 // ============================================================
 /*
-<div class="panel">
+<div class="thumbnail">
   Content here...
 </div>
 */
 
 // Mixins
 // ============================================================
-@mixin panel-variant(
-  $panel-border: 0
+@mixin thumbnail-variant(
 ) {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -33,19 +32,66 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  border: $panel-border;
+  display: block;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .thumbnail-icon {
+    position: relative;
+    padding-bottom: 100%;
+    background-color: $color-orange-1;
+  }
+
+  .thumbnail-icon-body {
+    @include translate(-50%, -50%);
+    position: absolute;
+    z-index: $z-index-1;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .thumbnail-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 5px 2px;
+    border: $border-width-mn solid $color-orange-1;
+
+    .title {
+      @extend #{$text-style-first-xs-bold};
+      color: $color-orange-1;
+    }
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-active {
+    .thumbnail-icon {
+      background-color: $color-orange-3;
+    }
+  }
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .thumbnail-title {
+    .title {
+      @media (max-width: $breakpoint-mobile-xs-max) {
+        font-size: 4.9vw;
+      }
+
+      @media (min-width: $breakpoint-mobile-sm) and (max-width: $breakpoint-mobile-lg) {
+        font-size: 5.2vw;
+      }
+    }
+  }
 }
 
 // Browser variations
@@ -73,120 +119,16 @@
 
 // Default
 // ------------------------------------------------
-.panel {
+.thumbnail {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant();
+  @include thumbnail-variant();
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States with modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Media queries
-  // >>>>>>>>>>>>>>>>>>>>>>>
-}
-
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE 10-11
-.ie {}
-
-// Edge
-.edge {}
-
-// Safari mac
-.safari {}
-
-// Firefox
-.firefox {}
-
-// Safari iPhone/iPad
-.safari-mobile {}
-
-// Chrome Android
-.chrome-mobile {}
-
-// Form
-// ------------------------------------------------
-.panel-form {
-  // Mixins
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant(
-    $panel-border: $border-width-mn solid $color-gray-4
-  );
-
-  // Helpers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Parent styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  border-bottom: 0;
-
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States with modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Media queries
-  // >>>>>>>>>>>>>>>>>>>>>>>
-}
-
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE 10-11
-.ie {}
-
-// Edge
-.edge {}
-
-// Safari mac
-.safari {}
-
-// Firefox
-.firefox {}
-
-// Safari iPhone/iPad
-.safari-mobile {}
-
-// Chrome Android
-.chrome-mobile {}
-
-// List
-// ------------------------------------------------
-.panel-list {
-  // Mixins
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant(
-    $panel-border: $border-width-mn solid $color-orange-1
-  );
-
-  // Helpers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Parent styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  margin-bottom: 10px;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>

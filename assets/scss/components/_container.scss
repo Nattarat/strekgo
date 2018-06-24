@@ -196,12 +196,30 @@
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .container-content-inner {
+    padding: 15px 20px;
+
+    &.is-side-padding-sm {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-except-topbar-title {
+    margin-top: $topbar-title-height;
+    height: calc(100vh - #{$topbar-title-height});
+  }
+
+  &.is-except-footer-button {
+    height: calc(100vh - #{$topbar-height} - #{$button-height-default});
+  }
+
+
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>

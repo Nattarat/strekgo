@@ -99,6 +99,7 @@
 
     &.is-content-center {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -111,6 +112,11 @@
       align-items: center;
       text-align: center;
     }
+
+    &.is-content-more {
+      min-height: 1px;
+      padding: $modal-padding-side;
+    }
   }
 
   .modal-footer {
@@ -119,6 +125,16 @@
     padding-left: $modal-padding-side;
     background-color: $color-white;
     border-radius: 0 0 $modal-border-radius $modal-border-radius;
+  }
+
+  .modal-button-confirm {
+    display: flex;
+    margin-left: -1px;
+
+    .button {
+      flex: 1;
+      margin-left: 1px;
+    }
   }
 
   .modal-segment {
@@ -140,6 +156,16 @@
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+
+  .modal-button-confirm {
+    .button {
+      .button-text {
+        @media (max-width: $breakpoint-mobile-lg) {
+          font-size: 5.8vw;
+        }
+      }
+    }
+  }
 }
 
 // Browser variations

@@ -1,7 +1,7 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
 //
-// Panel
+// list
 // * Structure & Detail
 // * Mixins
 // * Contextual variations
@@ -15,15 +15,14 @@
 // Structure & Detail
 // ============================================================
 /*
-<div class="panel">
+<div class="list">
   Content here...
 </div>
 */
 
 // Mixins
 // ============================================================
-@mixin panel-variant(
-  $panel-border: 0
+@mixin list-variant(
 ) {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -33,10 +32,44 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  border: $panel-border;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .list-item {
+    display: flex;
+    padding: 12px 15px;
+    border-bottom: 1px solid $color-orange-1;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    // Border
+    &.is-border {
+      border: 1px solid $color-orange-1;
+
+      &:last-child {
+        border: 1px solid $color-orange-1;
+      }
+    }
+
+    // Spacing
+    &.is-gutter-mn {
+      margin-bottom: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .list-label {
+
+  }
+
+  .list-value {
+
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -73,10 +106,10 @@
 
 // Default
 // ------------------------------------------------
-.panel {
+.list {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant();
+  @include list-variant();
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -120,24 +153,42 @@
 // Chrome Android
 .chrome-mobile {}
 
-// Form
+// Profile
 // ------------------------------------------------
-.panel-form {
+.list-profile {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant(
-    $panel-border: $border-width-mn solid $color-gray-4
-  );
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  border-bottom: 0;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .list-item {
+    display: flex;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .list-label {
+    .text {
+      @extend #{$text-style-first-sm-bold};
+      color: $color-gray-2;
+    }
+  }
+
+  .list-value {
+    .text {
+      @extend #{$text-style-first-sm-bold};
+      color: $color-gray-6;
+    }
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -150,58 +201,21 @@
 
   // Media queries
   // >>>>>>>>>>>>>>>>>>>>>>>
-}
+  .list-label {
+    .text {
+      @media (max-width: $breakpoint-mobile-lg) {
+        font-size: 5.8vw;
+      }
+    }
+  }
 
-// Browser variations
-// >>>>>>>>>>>>>>>>>>>>>>>
-// IE 10-11
-.ie {}
-
-// Edge
-.edge {}
-
-// Safari mac
-.safari {}
-
-// Firefox
-.firefox {}
-
-// Safari iPhone/iPad
-.safari-mobile {}
-
-// Chrome Android
-.chrome-mobile {}
-
-// List
-// ------------------------------------------------
-.panel-list {
-  // Mixins
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  @include panel-variant(
-    $panel-border: $border-width-mn solid $color-orange-1
-  );
-
-  // Helpers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Parent styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-  margin-bottom: 10px;
-
-  // Child element styles
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // States with modifiers
-  // >>>>>>>>>>>>>>>>>>>>>>>
-
-  // Media queries
-  // >>>>>>>>>>>>>>>>>>>>>>>
+  .list-value {
+    .text {
+      @media (max-width: $breakpoint-mobile-lg) {
+        font-size: 5.8vw;
+      }
+    }
+  }
 }
 
 // Browser variations

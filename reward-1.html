@@ -84,9 +84,11 @@
 <body>
   <!-- Topbar -->
   <div class="topbar">
-    <div class="topbar-info">
-      <span class="text-first-lg-bold is-orange-1 is-ellipsis" title="ศิริชัย  ลาภมหานนท์">ศิริชัย  ลาภมหานนท์</span>
-      <span class="text-first-sm-bold is-gray-4 is-ellipsis" title="ร้าน Young IT">ร้าน Young IT</span>
+    <div class="topbar-back">
+      <a class="button-back" href="#">
+        <img src="./assets/images/icons/icon-back.png" alt="Icon">
+      </a>
+      <span class="text-first-bg-bold is-orange-1">รางวัล</span>
     </div>
     <div class="topbar-point">
       <span class="text-first-hg-bold is-white for-point-number">9999</span>
@@ -95,88 +97,82 @@
   </div>
 
   <div class="container-content">
-    <!-- Product -->
-    <div class="card-news">
-      <div class="postbar">
-        <div class="postbar-info">
-          <div class="postbar-segment is-logo">
-            <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
-          </div>
-          <div class="postbar-segment is-meta">
-            <img class="logo-outline" src="./assets/images/logos/logo-text-outline.svg" alt="Logo">
-            <div class="datetime">โพสต์ 1 พศจิกายน 2561 เวลา 15.00 น.</div>
-          </div>
+    <div class="postbar is-light-theme">
+      <div class="postbar-info">
+        <div class="postbar-segment is-logo">
+          <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
         </div>
-        <div class="postbar-action">
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank">
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-download.svg" alt="Icon">
-                <span class="button-text">Download</span>
-              </span>
-            </a>
-          </div>
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank"><!-- add class 'is-active' to display keeped status -->
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-keep.svg" alt="Icon">
-                <span class="button-text">Keep</span>
-              </span>
-            </a>
-          </div>
+        <div class="postbar-segment is-meta">
+          <span class="username" title="ศิริชัย  ลาภมหานนท์">ศิริชัย ลาภมหานนท์</span>
+          <span class="shopname" title="ร้าน Young IT">ร้าน Young IT</span>
         </div>
-      </div>
-      <div class="card-image">
-        <img src="./assets/images/contents/cover-news-1.png" alt="News cover">
-      </div>
-      <div class="card-button is-purchase">
-        <a class="button is-xs is-orange-transparent is-border-radius-lg" href="#">
-          <span class="button-body">
-            <span class="button-text">สนใจสั่งซื้อสินค้า</span>
-          </span>
-        </a>
       </div>
     </div>
-
-    <!-- Video -->
-    <div class="card-news">
-      <div class="postbar">
-        <div class="postbar-info">
-          <div class="postbar-segment is-logo">
-            <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
-          </div>
-          <div class="postbar-segment is-meta">
-            <img class="logo-outline" src="./assets/images/logos/logo-text-outline.svg" alt="Logo">
-            <div class="datetime">โพสต์ 1 พศจิกายน 2561 เวลา 15.00 น.</div>
-          </div>
-        </div>
-        <div class="postbar-action">
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank">
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-download.svg" alt="Icon">
-                <span class="button-text">Download</span>
-              </span>
+    <div class="container-content-inner">
+      <div class="reward">
+        <ul class="list">
+          <li class="list-item is-border is-gutter-mn is-flex-spacebetween">
+            <div class="list-label">
+              <span class="text-first-lg-bold is-orange-1">คแนนทั้งหมด</span>
+            </div>
+            <div class="list-value">
+              <span class="text-first-lg-bold is-gray-4">15400</span>
+            </div>
+          </li>
+          <li class="list-item is-border is-gutter-mn is-flex-spacebetween">
+            <div class="list-label">
+              <span class="text-first-lg-bold is-orange-1">คะแนนที่ใช้ไปแล้ว</span>
+            </div>
+            <div class="list-value">
+              <span class="text-first-lg-bold is-gray-4">6907</span>
+            </div>
+          </li>
+          <li class="list-item is-border is-gutter-mn is-flex-spacebetween">
+            <div class="list-label">
+              <span class="text-first-lg-bold is-orange-1">คะแนนคงเหลือ</span>
+            </div>
+            <div class="list-value">
+              <span class="text-first-lg-bold is-gray-4">8493</span>
+            </div>
+          </li>
+        </ul>
+        <div class="reward-control">
+          <div class="reward-control-col">
+            <a class="thumbnail is-active" href="#">
+              <div class="thumbnail-icon">
+                <div class="thumbnail-icon-body">
+                  <img src="./assets/images/icons/icon-reward-history.svg" alt="Icon">
+                </div>
+              </div>
+              <div class="thumbnail-title">
+                <span class="title">แลกรางวัล</span>
+              </div>
             </a>
           </div>
-          <div class="postbar-segment is-button">
-            <a class="button-circle" href="#" target="_blank"><!-- add class 'is-active' to display keeped status -->
-              <span class="button-body">
-                <img class="button-icon" src="./assets/images/icons/icon-keep.svg" alt="Icon">
-                <span class="button-text">Keep</span>
-              </span>
+          <div class="reward-control-col">
+            <a class="thumbnail" href="#">
+              <div class="thumbnail-icon">
+                <div class="thumbnail-icon-body">
+                  <img src="./assets/images/icons/icon-score-history.svg" alt="Icon">
+                </div>
+              </div>
+              <div class="thumbnail-title">
+                <span class="title">ประวัติคะแนน</span>
+              </div>
             </a>
           </div>
-        </div>
-      </div>
-      <div class="card-image">
-        <img src="./assets/images/contents/cover-news-2.jpg" alt="News cover">
-        <div class="card-button is-video">
-          <a class="button is-flexible is-transparent" href="#">
-            <span class="button-body">
-              <img class="button-icon" src="./assets/images/icons/icon-play-video.svg" alt="Icon">
-            </span>
-          </a>
+          <div class="reward-control-col">
+            <a class="thumbnail" href="#">
+              <div class="thumbnail-icon">
+                <div class="thumbnail-icon-body">
+                  <img src="./assets/images/icons/icon-reward-large.svg" alt="Icon">
+                </div>
+              </div>
+              <div class="thumbnail-title">
+                <span class="title">ประวัติแลกรางวัล</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -184,7 +180,7 @@
 
   <!-- Navigation bar -->
   <div class="navigationbar">
-      <a class="navigation-button is-active" href="#"><!-- add class 'is-active' to display selected status -->
+      <a class="navigation-button" href="#"><!-- add class 'is-active' to display selected status -->
         <img class="navigation-icon" src="./assets/images/icons/icon-news.svg" alt="Icon">
         <span class="text-first-xs-bold is-white">ข่าวสาร</span>
       </a>
@@ -192,7 +188,7 @@
         <img class="navigation-icon" src="./assets/images/icons/icon-scan.svg" alt="Icon">
         <span class="text-first-xs-bold is-white">แสกนสินค้า</span>
       </a>
-      <a class="navigation-button" href="#">
+      <a class="navigation-button is-active" href="#">
         <img class="navigation-icon" src="./assets/images/icons/icon-reward.svg" alt="Icon">
         <span class="text-first-xs-bold is-white">แลกรางวัล</span>
       </a>
