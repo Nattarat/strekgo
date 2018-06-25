@@ -124,6 +124,26 @@
           <span class="button-text">Open modal reward finished</span>
         </span>
       </a>
+      <a id="button-modal-profile-finished" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal profile finished</span>
+        </span>
+      </a>
+      <a id="button-modal-change-password" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal change password</span>
+        </span>
+      </a>
+      <a id="button-modal-otp-input" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal otp input</span>
+        </span>
+      </a>
+      <a id="button-modal-change-password-finished" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal change password finished</span>
+        </span>
+      </a>
     </div>
   </div>
 
@@ -349,6 +369,127 @@
     <div class="modal-overlay"></div>
   </div>
 
+  <!-- Profile finished -->
+  <div id="modal-profile-finished" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="text-first-md-bold is-white">เปลี่ยนแปลงข้อมูลโปรไฟล์</span>
+      </div>
+      <div class="modal-body is-content-center">
+        <span class="text-first-lg-bold is-orange-1">การเปลี่ยนแปลงข้อมูลเสร็จสมบูรณ์</span>
+      </div>
+      <div class="modal-footer">
+        <a class="button button-modal-close is-sm is-fluid" href="#">
+          <span class="button-body">
+            <span class="button-text">กลับ</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Change password -->
+  <div id="modal-change-password" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="text-first-md-bold is-white">คุณต้องการเปลี่ยนแปลงรหัสใช้งานใหม่</span>
+      </div>
+      <div class="modal-body is-content-more">
+        <div class="panel-form is-fluid">
+          <div class="field is-sm">
+            <!-- add class 'is-error' to display error UI and validation message -->
+            <input class="field-input" type="text" placeholder="รหัสเดิม">
+            <p class="field-message">error_text</p>
+          </div>
+          <div class="field is-sm">
+            <!-- add class 'is-error' to display error UI and validation message -->
+            <input class="field-input" type="text" placeholder="รหัสใหม่">
+            <p class="field-message">error_text</p>
+          </div>
+          <div class="field is-sm">
+            <!-- add class 'is-error' to display error UI and validation message -->
+            <input class="field-input" type="text" placeholder="ยืนยันรหัส">
+            <p class="field-message">error_text</p>
+          </div>
+          <div class="field is-sm">
+            <!-- add class 'is-error' to display error UI and validation message -->
+            <input class="field-input" type="text" placeholder="เบอร์โทรเพื่อรับรหัส OTP">
+            <p class="field-message">error_text</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-button-confirm">
+          <a class="button button-modal-close is-sm is-flexible" href="#">
+            <span class="button-body">
+              <span class="button-text">ตกลง</span>
+            </span>
+          </a>
+          <a class="button button-modal-close is-sm is-flexible" href="#">
+            <span class="button-body">
+              <span class="button-text">ยกเลิก</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- OTP input -->
+  <div id="modal-otp-input" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="text-first-md-bold is-white">กรุณากรอกรหัส OTP</span>
+      </div>
+      <div class="modal-body is-content-center">
+        <div class="panel-form is-fluid">
+          <div class="field is-sm">
+            <!-- add class 'is-error' to display error UI and validation message -->
+            <input class="field-input" type="text" placeholder="รหัส OTP">
+            <p class="field-message">error_text</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-button-confirm">
+          <a class="button button-modal-close is-sm is-flexible" href="#">
+            <span class="button-body">
+              <span class="button-text">ตกลง</span>
+            </span>
+          </a>
+          <a class="button button-modal-close is-sm is-flexible" href="#">
+            <span class="button-body">
+              <span class="button-text">ยกเลิก</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Change password finished -->
+  <div id="modal-change-password-finished" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="text-first-md-bold is-white">เปลี่ยนรหัสใช้งาน</span>
+      </div>
+      <div class="modal-body is-content-center">
+        <span class="text-first-lg-bold is-orange-1">การเปลี่ยนแปลงรหัสเสร็จสมบูรณ์</span>
+      </div>
+      <div class="modal-footer">
+        <a class="button button-modal-close is-sm is-fluid" href="#">
+          <span class="button-body">
+            <span class="button-text">กลับหน้าหลัก</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
   <script type="text/javascript" src="./../assets/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./../assets/js/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./../assets/js/is_js/is.min.js"></script>
@@ -395,6 +536,26 @@
       // Open modal reward finished
       $('#button-modal-reward-finished').on("click", function() {
           $('#modal-reward-finished').addClass('is-open');
+      });
+
+      // Open modal profile finished
+      $('#button-modal-profile-finished').on("click", function() {
+          $('#modal-profile-finished').addClass('is-open');
+      });
+
+      // Open modal change password
+      $('#button-modal-change-password').on("click", function() {
+          $('#modal-change-password').addClass('is-open');
+      });
+
+      // Open modal otp input
+      $('#button-modal-otp-input').on("click", function() {
+          $('#modal-otp-input').addClass('is-open');
+      });
+
+      // Open modal change password finished
+      $('#button-modal-change-password-finished').on("click", function() {
+          $('#modal-change-password-finished').addClass('is-open');
       });
     });
   </script>

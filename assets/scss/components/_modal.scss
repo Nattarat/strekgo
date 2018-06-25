@@ -156,6 +156,12 @@
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .modal-container {
+    @media (max-width: $breakpoint-mobile-lg) {
+      right: 20px;
+      left: 20px;
+    }
+  }
 
   .modal-button-confirm {
     .button {
