@@ -116,6 +116,10 @@
     @extend #{$button-text-style};
     color: $button-text-color;
 
+    &.is-tn {
+      font-size: $font-size-first-tn;
+    }
+
     &.is-lg {
       font-size: $font-size-first-lg;
     }
@@ -205,6 +209,10 @@
     background-color: rgba(245, 130, 32, 0.8);
   }
 
+  &.is-gray {
+    background-color: $color-gray-1;
+  }
+
   // Structures
   &.is-flexible {
     min-width: 1px;
@@ -212,6 +220,26 @@
 
   &.is-fluid {
     width: 100%;
+  }
+
+  // Options
+  &.is-upload-file {
+    position: relative;
+
+    .field-file {
+      opacity: 0;
+      position: absolute;
+      z-index: $z-index-1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      // Fix show cursor pointer on input type="file" cover
+      -webkit-appearance: button;
+      cursor: pointer;
+      text-indent: -999px;
+    }
   }
 
   // States with modifiers

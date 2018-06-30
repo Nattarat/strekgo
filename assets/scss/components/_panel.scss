@@ -223,3 +223,55 @@
 
 // Chrome Android
 .chrome-mobile {}
+
+// Upload file
+// ------------------------------------------------
+.panel-upload-file {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include panel-variant(
+    $panel-border: 2px solid $color-gray-1
+  );
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  padding: 20px;
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

@@ -82,38 +82,62 @@
   -->
 </head>
 <body>
-  <div class="container">
-    <div class="container-content">
-      <ul>
-        <li><a href="navigationbar.html" target="_blank">1. navigation bar with ScrollTo</a></li>
-        <li><a href="modal-collection.html" target="_blank">2. modal collection</a></li>
-        <li><a href="splash-screen.html" target="_blank">3. splash screen</a></li>
-        <li><a href="login.html" target="_blank">4. login</a></li>
-        <li><a href="register-1.html" target="_blank">5. register part 1</a></li>
-        <li><a href="register-2.html" target="_blank">6. register part 2</a></li>
-        <li><a href="register-3.html" target="_blank">7. register part 3</a></li>
-        <li><a href="register-4.html" target="_blank">8. register part 4</a></li>
-        <li><a href="register-5.html" target="_blank">8. register result</a></li>
-        <li><a href="scan-1.html" target="_blank">9. scan code</a></li>
-        <li><a href="scan-2.html" target="_blank">10. scan result</a></li>
-        <li><a href="reward-1.html" target="_blank">11. reward dashboard</a></li>
-        <li><a href="reward-2.html" target="_blank">12. reward lists</a></li>
-        <li><a href="reward-3.html" target="_blank">13. reward detail</a></li>
-        <li><a href="reward-4.html" target="_blank">14. reward score history</a></li>
-        <li><a href="reward-5.html" target="_blank">15. reward exchange history</a></li>
-        <li><a href="profile-1.html" target="_blank">16. profile dashboard</a></li>
-        <li><a href="profile-2.html" target="_blank">17. profile edit</a></li>
-        <li><a href="keep.html" target="_blank">18. keep</a></li>
-        <li><a href="contact-1.html" target="_blank">19. contact</a></li>
-        <li><a href="insurance.html" target="_blank">20. insurance</a></li>
-        <!-- <li><a href="XXXXX.html" target="_blank">XXX. XXXXX</a></li> -->
-      </ul>
-    </div>
+  <!-- Navigation bar -->
+  <div class="navigationbar">
+    <a id="news" class="navigation-button" href="#"><!-- add class 'is-active' to display selected status -->
+      <img class="navigation-icon" src="./assets/images/icons/icon-news.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">ข่าวสาร</span>
+    </a>
+    <a id="scan" class="navigation-button" href="#">
+      <img class="navigation-icon" src="./assets/images/icons/icon-scan.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">แสกนสินค้า</span>
+    </a>
+    <a id="reward" class="navigation-button" href="#">
+      <img class="navigation-icon" src="./assets/images/icons/icon-reward.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">แลกรางวัล</span>
+    </a>
+    <a id="profile" class="navigation-button" href="#">
+      <img class="navigation-icon" src="./assets/images/icons/icon-profile.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">โปรไฟล์</span>
+    </a>
+    <a id="keep" class="navigation-button" href="#">
+      <img class="navigation-icon" src="./assets/images/icons/icon-keep-large.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">Keep</span>
+    </a>
+    <a id="contact" class="navigation-button" href="#">
+      <img class="navigation-icon" src="./assets/images/icons/icon-contact.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">ติดต่อเรา</span>
+    </a>
+    <a id="strek" class="navigation-button" href="#">
+      <img class="navigation-icon" src="./assets/images/icons/icon-home.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">เอสเทรค</span>
+    </a>
+    <a id="insurance" class="navigation-button" href="#">
+      <img class="navigation-icon" src="./assets/images/icons/icon-insurance.svg" alt="Icon">
+      <span class="text-first-xs-bold is-white">เช็คประกัน</span>
+    </a>
   </div>
 
   <script type="text/javascript" src="./../assets/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./../assets/js/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./../assets/js/is_js/is.min.js"></script>
+  <script type="text/javascript" src="./../assets/js/jquery.scrollTo/jquery.scrollTo.min.js"></script>
   <script type="text/javascript" src="./../assets/js/main.js"></script>
+  <script>
+    // ScrollTo
+    // ============================================================
+    $(function() {
+      // ScrollTo target
+      $('.navigationbar').scrollTo(
+        // Target: #news, #scan, #reward, #profile, #keep, #contact, #strek, #insurance
+        '#profile',
+        {
+          onAfter: function() {
+            $('#profile').addClass('is-active');
+          }
+        }
+      );
+    });
+  </script>
 </body>
 </html>

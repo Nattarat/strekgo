@@ -138,6 +138,9 @@
   }
 
   .modal-segment {
+    &.is-spacing-bottom-mn {
+      margin-bottom: 5px;
+    }
   }
 
   // States

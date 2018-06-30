@@ -144,6 +144,11 @@
           <span class="button-text">Open modal change password finished</span>
         </span>
       </a>
+      <a id="button-modal-contact-finished" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal contact finished</span>
+        </span>
+      </a>
     </div>
   </div>
 
@@ -225,6 +230,8 @@
           <div class="modal-segment">
             <span class="text-first-lg-bold is-orange-1">รหัสบาร์โค้ดไม่ถูกต้อง</span>
             <!-- <span class="text-first-lg-bold is-orange-1">รหัสนี้ถูกใช้งานไปแล้ว</span> -->
+            <!-- <span class="text-first-lg-bold is-orange-1">คุณต้องการกรอกรหัสใหม่หรือไม่?</span> -->
+            <!-- <span class="text-first-lg-bold is-orange-1">คุณต้องการติดต่อเจ้าหน้าที่?</span> -->
           </div>
           <div class="modal-segment">
             <span class="text-first-md-bold is-orange-1">คุณต้องการกรอกรหัสเองหรือไม่?</span>
@@ -255,8 +262,8 @@
           <span class="text-first-md-bold is-white">สแกนสินค้า</span>
         </div>
         <div class="modal-body is-content-center">
-          <div class="modal-segment">
-            <span class="text-first-lg-bold is-orange-1">กรุณากรอกบาร์โค้ด 10 หลักหลัง</span>
+          <div class="modal-segment is-spacing-bottom-mn">
+            <span class="text-first-lg-bold is-orange-1">กรุณากรอกบาร์โค้ด 10 หลัก</span>
           </div>
           <div class="modal-segment is-fluid">
             <div class="field is-sm is-border">
@@ -490,6 +497,26 @@
     <div class="modal-overlay"></div>
   </div>
 
+  <!-- Contact finished -->
+  <div id="modal-contact-finished" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="text-first-md-bold is-white">ติดต่อเรา - ส่งข้อความ</span>
+      </div>
+      <div class="modal-body is-content-center">
+        <span class="text-first-sm-bold is-orange-1 is-single-line">ข้อความของคุณได้ถูกส่งไปให้เจ้าหน้าที่เรียบร้อย <br class="hidden-mobile-md-max" /> เจ้าหน้าที่จะรีบติดต่อกลับโดยเร็ว</span>
+      </div>
+      <div class="modal-footer">
+        <a class="button button-modal-close is-sm is-fluid" href="#">
+          <span class="button-body">
+            <span class="button-text">กลับหน้าหลัก</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
   <script type="text/javascript" src="./../assets/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./../assets/js/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./../assets/js/is_js/is.min.js"></script>
@@ -556,6 +583,11 @@
       // Open modal change password finished
       $('#button-modal-change-password-finished').on("click", function() {
           $('#modal-change-password-finished').addClass('is-open');
+      });
+
+      // Open modal contact finished
+      $('#button-modal-contact-finished').on("click", function() {
+          $('#modal-contact-finished').addClass('is-open');
       });
     });
   </script>

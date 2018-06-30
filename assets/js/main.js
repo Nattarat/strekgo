@@ -4,6 +4,7 @@
 // Global javascript
 // * Browser condition
 // * Modal close
+// * ScrollTo default settings
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,4 +33,12 @@ $(function() {
   $('.button-modal-close, .modal-overlay').on("click", function() {
       $('.modal').removeClass('is-open');
   });
+});
+
+
+// ScrollTo default settings
+// ============================================================
+$.extend($.scrollTo.defaults, {
+  duration: 500,
+  easing: 'linear'
 });

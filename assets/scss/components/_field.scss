@@ -127,6 +127,14 @@
     }
   }
 
+  &.is-textarea {
+    .field-input {
+      max-width: 100%;
+      height: 230px;
+      padding: 20px;
+    }
+  }
+
   &.is-single-line {
     border-bottom-color: $color-orange-1;
 
@@ -140,6 +148,10 @@
     border: 1px solid $color-orange-1;
   }
 
+  &.is-border-bold {
+    border: 2px solid $color-gray-1;
+  }
+
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
   &.is-error {
@@ -150,8 +162,18 @@
       }
     }
 
+    &.is-textarea {
+      .field-message {
+        padding-top: 10px;
+      }
+    }
+
     &.is-single-line {
       border-bottom-color: $color-red-1;
+    }
+
+    &.is-border-bold {
+      border-color: $color-red-1;
     }
   }
 }

@@ -77,6 +77,9 @@
   }
 
   .table-head-col {
+    padding-top: 6px;
+    padding-bottom: 5px;
+
     .text {
       @extend #{$text-style-first-sm-bold};
       color: $color-white;
@@ -95,6 +98,9 @@
   }
 
   .table-col {
+    padding-top: 6px;
+    padding-bottom: 6px;
+
     .text {
       @extend #{$text-style-first-xs-bold};
       color: $color-gray-4;

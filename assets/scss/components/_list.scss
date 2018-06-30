@@ -76,6 +76,16 @@
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-striped {
+    .list-item {
+      background-color: $color-gray-2;
+      border-bottom: 0;
+
+      &:nth-child(even) {
+        background-color: $color-gray-1;
+      }
+    }
+  }
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -216,6 +226,70 @@
       }
     }
   }
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}
+
+// Upload file
+// ------------------------------------------------
+.list-upload-file {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .file-name {
+      max-width: 90%;
+    }
+
+    .button-delete {
+      flex: none;
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
 }
 
 // Browser variations

@@ -219,7 +219,10 @@
     height: calc(100vh - #{$topbar-height} - #{$button-height-default});
   }
 
-
+  &.is-except-topbar-footer {
+    margin-top: 0;
+    height: calc(100vh - #{$topbar-height} - #{$button-height-default} + 40px);
+  }
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
