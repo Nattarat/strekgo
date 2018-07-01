@@ -32,6 +32,9 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  @include transition(all 0.3s ease);
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   z-index: $z-index-5;
   top: 0;
@@ -48,6 +51,10 @@
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
