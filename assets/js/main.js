@@ -4,6 +4,7 @@
 // Global javascript
 // * Browser condition
 // * Modal close
+// * NiceScroll
 // * ScrollTo default settings
 //
 // ==================================================================================================
@@ -34,6 +35,17 @@ $(function() {
       $('.modal').removeClass('is-open');
       document.getElementById('video-content').pause();
   });
+});
+
+// NiceScroll
+// ============================================================
+$(function() {
+  if (is.desktop()) {
+    $('.navigationbar').niceScroll({
+      cursorborder: '0',
+      cursorborderradius: '0'
+    });
+  }
 });
 
 
