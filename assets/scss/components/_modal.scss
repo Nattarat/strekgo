@@ -156,6 +156,12 @@
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-video {
+    .modal-container {
+      max-width: $modal-content-width-default;
+      background-color: transparent;
+    }
+  }
 
   // States with modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>

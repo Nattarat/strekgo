@@ -59,6 +59,7 @@ $color-red-1: #FF0000 !default;
 
 // Overlay
 $color-overlay-1: rgba(0, 0, 0, 0.5) !default;
+$color-overlay-2: rgba(255, 255, 255, 0.9) !default;
 
 // Font families
 // ============================================================
@@ -208,6 +209,7 @@ $field-width-default: 250px !default;
 $button-width-default: 150px !default;
 
 $modal-width-default: 340px !default;
+$modal-content-width-default: 640px !default;
 $navigation-button-width: 25% !default; // 105px
 $score-width: 132px !default;
 

@@ -41,6 +41,7 @@
   <meta name="msapplication-square310x310logo" content="./../assets/images/favicons/ms-application-lg.png">
   <meta name="msapplication-wide310x150logo" content="./../assets/images/favicons/ms-application-wide.png">
   <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./../assets/css/vendors/loaders/loaders.min.css">
   <link rel="stylesheet" type="text/css" href="./../assets/css/main.min.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -82,41 +83,86 @@
   -->
 </head>
 <body>
-  <div class="background-container">
-    <div class="container">
-      <form class="login" action="">
-        <div class="login-segment is-logo">
-          <img class="logo" src="./assets/images/logos/logo.svg" alt="Logo">
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-back">
+      <a class="button-back" href="#">
+        <img src="./assets/images/icons/icon-back.png" alt="Icon">
+      </a>
+      <span class="text-first-bg-bold is-orange-1 is-nowrap">รางวัลทั้งหมด</span>
+    </div>
+    <div class="topbar-point">
+      <span class="text-first-hg-bold is-white for-point-number">9999</span>
+      <span class="text-first-md-bold is-white for-point-unit">คะแนน</span>
+    </div>
+  </div>
+
+  <div class="container-content">
+    <div class="postbar is-light-theme">
+      <div class="postbar-info">
+        <div class="postbar-segment is-logo">
+          <img class="logo" src="./assets/images/logos/logo-small.png" alt="Logo">
         </div>
-        <div class="login-segment is-form">
-          <div class="panel-form">
-            <div class="field-group is-error"><!-- add class 'is-error' to display error UI and validation message -->
-              <div class="field">
-                <input class="field-input" type="text" placeholder="ชื่อผู้ใช้งาน">
-              </div>
-              <div class="field">
-                <input class="field-input" type="password" placeholder="รหัสผ่าน">
-              </div>
-              <p class="field-group-message">error_text</p>
-            </div>
-          </div>
+        <div class="postbar-segment is-meta is-meta-short">
+          <span class="username" title="ศิริชัย  ลาภมหานนท์">ศิริชัย ลาภมหานนท์</span>
+          <span class="shopname" title="ร้าน Young IT">ร้าน Young IT</span>
         </div>
-        <div class="login-segment is-button">
-          <button class="button is-fluid" type="button">
-            <span class="button-body">
-              <span class="button-text">เข้าสู่ระบบ</span>
+      </div>
+      <div class="postbar-action is-single-button">
+        <div class="postbar-segment is-button">
+          <a class="button-circle" href="#" target="_blank">
+            <span class="button-body is-flex-center-all">
+              <span class="text-first-mn-bold is-white">ตัวกรอง</span>
+              <span class="text-first-mn-bold is-white">รางวัล</span>
             </span>
-          </button>
+          </a>
         </div>
-        <div class="login-segment is-footer">
-          <div class="login-segment is-link-left">
-            <a href="#">ลืมรหัสผ่าน?</a>
-          </div>
-          <div class="login-segment is-link-left">
-            <a href="#">ยังไม่มีบัญชีผู้ใช้งาน?</a>
-          </div>
-        </div>
-      </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navigationbar">
+      <a class="navigation-button" href="#"><!-- add class 'is-active' to display selected status -->
+        <img class="navigation-icon" src="./assets/images/icons/icon-news.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">ข่าวสาร</span>
+      </a>
+      <a class="navigation-button" href="#">
+        <img class="navigation-icon" src="./assets/images/icons/icon-scan.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">แสกนสินค้า</span>
+      </a>
+      <a class="navigation-button is-active" href="#">
+        <img class="navigation-icon" src="./assets/images/icons/icon-reward.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">แลกรางวัล</span>
+      </a>
+      <a class="navigation-button" href="#">
+        <img class="navigation-icon" src="./assets/images/icons/icon-profile.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">โปรไฟล์</span>
+      </a>
+      <a class="navigation-button" href="#">
+        <img class="navigation-icon" src="./assets/images/icons/icon-keep-large.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">Keep</span>
+      </a>
+      <a class="navigation-button" href="#">
+        <img class="navigation-icon" src="./assets/images/icons/icon-contact.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">ติดต่อเรา</span>
+      </a>
+      <a class="navigation-button" href="#">
+        <img class="navigation-icon" src="./assets/images/icons/icon-home.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">เอสเทรค</span>
+      </a>
+      <a class="navigation-button" href="#">
+        <img class="navigation-icon" src="./assets/images/icons/icon-insurance.svg" alt="Icon">
+        <span class="text-first-xs-bold is-white">เช็คประกัน</span>
+      </a>
+  </div>
+
+  <!-- Loading -->
+  <div class="loading is-orange">
+    <div class="ball-pulse">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 

@@ -249,3 +249,89 @@
 
 // Chrome Android
 .chrome-mobile {}
+
+// Group field for Default
+// ------------------------------------------------
+.field-group {
+  // Mixins
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Helpers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Parent styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Child element styles
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  .field-group-message {
+    @extend #{$text-style-first-xxs-bold};
+    display: none;
+    padding: $spacing-tn $spacing-tn;
+    border-bottom: $border-width-mn solid $color-gray-4;
+    color: $color-red-1;
+    text-align: left;
+  }
+
+  // States
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-error {
+    .field {
+      border-bottom-color: $color-red-1;
+
+      &.is-select {
+        &:after {
+          @include translateY(0);
+          top: 0;
+        }
+      }
+
+      &.is-textarea {
+        .field-message {
+          padding-top: 10px;
+        }
+      }
+
+      &.is-single-line {
+        border-bottom-color: $color-red-1;
+      }
+
+      &.is-border-bold {
+        border-color: $color-red-1;
+      }
+    }
+
+    .field-group-message {
+      display: block;
+    }
+  }
+
+  // Modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE 10-11
+.ie {}
+
+// Edge
+.edge {}
+
+// Safari mac
+.safari {}
+
+// Firefox
+.firefox {}
+
+// Safari iPhone/iPad
+.safari-mobile {}
+
+// Chrome Android
+.chrome-mobile {}

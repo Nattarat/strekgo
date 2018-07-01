@@ -32,6 +32,7 @@ $(function() {
 $(function() {
   $('.button-modal-close, .modal-overlay').on("click", function() {
       $('.modal').removeClass('is-open');
+      document.getElementById('video-content').pause();
   });
 });
 

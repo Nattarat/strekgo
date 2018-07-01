@@ -149,6 +149,11 @@
           <span class="button-text">Open modal contact finished</span>
         </span>
       </a>
+      <a id="button-modal-video" class="button is-fluid" href="#">
+        <span class="button-body">
+          <span class="button-text">Open modal video</span>
+        </span>
+      </a>
     </div>
   </div>
 
@@ -517,6 +522,16 @@
     <div class="modal-overlay"></div>
   </div>
 
+  <!-- Video -->
+  <div id="modal-video" class="modal is-video">
+    <div class="modal-container">
+      <video id="video-content" controls>
+        <source src="./assets/videos/the-illusion-of-life.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
   <script type="text/javascript" src="./../assets/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./../assets/js/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./../assets/js/is_js/is.min.js"></script>
@@ -588,6 +603,11 @@
       // Open modal contact finished
       $('#button-modal-contact-finished').on("click", function() {
           $('#modal-contact-finished').addClass('is-open');
+      });
+
+      // Open modal video
+      $('#button-modal-video').on("click", function() {
+          $('#modal-video').addClass('is-open');
       });
     });
   </script>
