@@ -21,7 +21,7 @@
   align-items: center;
   width: 359px;
   height: 237px;
-  margin-bottom: 90px;
+  margin: 0 auto 30px;
 
   &:before {
     @include translate(-50%, -50%);
@@ -115,6 +115,8 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  position: relative;
+  top: -50px;
   width: 100%;
   padding-left: $spacing-xs;
   padding-right: $spacing-xs;
@@ -154,7 +156,14 @@
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
   &.is-button {
+    display: flex;
     margin-top: $spacing-xs;
+    margin-left: -1px;
+
+    .button {
+      flex: 1;
+      margin-left: 1px;
+    }
   }
 
   // States with modifiers
