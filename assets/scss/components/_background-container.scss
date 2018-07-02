@@ -63,14 +63,42 @@
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
+  .background-container-inner {
+    background: url('#{$path-file-shares}/line-footer.svg') no-repeat left bottom;
+  }
 
   // States
   // >>>>>>>>>>>>>>>>>>>>>>>
 
   // Modifiers
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-splash-screen,
+  &.is-login {
+    padding: 65px 0 0 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &.is-splash-screen {
+    .background-container-inner {
+      height: calc(100vh - 18vh - 30px);
+    }
+  }
+
+  &.is-login {
+    height: 100vh;
+
+    .background-container-inner {
+      height: calc(100vh - 90px);
+    }
+  }
 
   // States with modifiers
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // Media queries
   // >>>>>>>>>>>>>>>>>>>>>>>
 }
 

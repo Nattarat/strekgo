@@ -77,6 +77,18 @@
     }
   }
 
+  .register-button {
+    &.is-group {
+      display: flex;
+      margin-left: -1px;
+
+      .button {
+        flex: 1;
+        margin-left: 1px;
+      }
+    }
+  }
+
   .heading {
     @extend #{$text-style-first-lg-bold};
     position: relative;

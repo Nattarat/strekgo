@@ -250,4 +250,8 @@
 .safari-mobile {}
 
 // Chrome Android
-.chrome-mobile {}
+.chrome-mobile {
+  .container-content {
+    padding-bottom: 56px;
+  }
+}

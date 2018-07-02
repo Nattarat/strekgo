@@ -82,41 +82,43 @@
   -->
 </head>
 <body>
-  <div class="background-container">
-    <div class="container">
-      <form class="login" action="">
-        <div class="login-segment is-logo">
-          <img class="logo" src="./assets/images/logos/logo.svg" alt="Logo">
-        </div>
-        <div class="login-segment is-form">
-          <div class="panel-form">
-            <div class="field-group is-error"><!-- add class 'is-error' to display error UI and validation message -->
-              <div class="field">
-                <input class="field-input" type="text" placeholder="ชื่อผู้ใช้งาน">
+  <div class="background-container is-login">
+    <div class="background-container-inner">
+      <div class="container is-login">
+        <form class="login" action="">
+          <div class="login-segment is-logo">
+            <img class="logo" src="./assets/images/logos/logo.svg" alt="Logo">
+          </div>
+          <div class="login-segment is-form">
+            <div class="panel-form">
+              <div class="field-group is-error"><!-- add class 'is-error' to display error UI and validation message -->
+                <div class="field">
+                  <input class="field-input" type="text" placeholder="ชื่อผู้ใช้งาน">
+                </div>
+                <div class="field">
+                  <input class="field-input" type="password" placeholder="รหัสผ่าน">
+                </div>
+                <p class="field-group-message">error_text</p>
               </div>
-              <div class="field">
-                <input class="field-input" type="password" placeholder="รหัสผ่าน">
-              </div>
-              <p class="field-group-message">error_text</p>
             </div>
           </div>
-        </div>
-        <div class="login-segment is-button">
-          <button class="button is-fluid" type="button">
-            <span class="button-body">
-              <span class="button-text">เข้าสู่ระบบ</span>
-            </span>
-          </button>
-        </div>
-        <div class="login-segment is-footer">
-          <div class="login-segment is-link-left">
-            <a href="#">ลืมรหัสผ่าน?</a>
+          <div class="login-segment is-button">
+            <button class="button is-fluid" type="button">
+              <span class="button-body">
+                <span class="button-text">เข้าสู่ระบบ</span>
+              </span>
+            </button>
           </div>
-          <div class="login-segment is-link-left">
-            <a href="#">ยังไม่มีบัญชีผู้ใช้งาน?</a>
+          <div class="login-segment is-footer">
+            <div class="login-segment is-link-left">
+              <a href="#">ลืมรหัสผ่าน?</a>
+            </div>
+            <div class="login-segment is-link-left">
+              <a href="#">ยังไม่มีบัญชีผู้ใช้งาน?</a>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 
