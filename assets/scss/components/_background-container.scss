@@ -75,9 +75,17 @@
   &.is-splash-screen,
   &.is-login {
     padding: 65px 0 0 0;
+  }
 
+  &.is-splash-screen,
+  &.is-login {
     &:after {
       display: none;
+    }
+  }
+
+  &.is-login {
+    &:after {
     }
   }
 
@@ -88,8 +96,12 @@
   }
 
   &.is-login {
+    min-height: 1px;
+    background-image: url('#{$path-file-shares}/bg-main-lg.jpg');
+    background-size: cover; // 100%
+
     .background-container-inner {
-      height: calc(100vh - 90px);
+      height: calc(100% - 25px);
     }
   }
 
@@ -98,6 +110,13 @@
 
   // Media queries
   // >>>>>>>>>>>>>>>>>>>>>>>
+  &.is-login {
+    @media (min-width: $breakpoint-tablet-lg) {
+      background-image: url('#{$path-file-shares}/bg-main-lg.jpg');
+    }
+
+    // background-size: contain; // 100%
+  }
 }
 
 // Browser variations

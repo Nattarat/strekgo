@@ -68,16 +68,10 @@
 
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
-  @include translateX(-50%);
-  position: absolute;
-  z-index: $z-index-1;
-  bottom: 20px;
-  left: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   width: 100%;
-  max-width: $breakpoint-mobile-lg;
+  margin-bottom: 30px;
+  text-align: center;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -109,6 +103,7 @@
 .scan-form {
   // Mixins
   // >>>>>>>>>>>>>>>>>>>>>>>
+  @include translateY(-50%);
 
   // Helpers
   // >>>>>>>>>>>>>>>>>>>>>>>
@@ -116,10 +111,11 @@
   // Parent styles
   // >>>>>>>>>>>>>>>>>>>>>>>
   position: relative;
-  top: -50px;
+  top: 50%;
   width: 100%;
   padding-left: $spacing-xs;
   padding-right: $spacing-xs;
+  margin-top: -50px;
 
   // Child element styles
   // >>>>>>>>>>>>>>>>>>>>>>>

@@ -91,7 +91,7 @@
           </div>
           <div class="login-segment is-form">
             <div class="panel-form">
-              <div class="field-group is-error"><!-- add class 'is-error' to display error UI and validation message -->
+              <div class="field-group"><!-- add class 'is-error' to display error UI and validation message -->
                 <div class="field">
                   <input class="field-input" type="text" placeholder="ชื่อผู้ใช้งาน">
                 </div>
@@ -126,5 +126,24 @@
   <script type="text/javascript" src="./../assets/js/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./../assets/js/is_js/is.min.js"></script>
   <script type="text/javascript" src="./../assets/js/main.js"></script>
+  <script>
+    // global vars
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+
+    // set initial div height / width
+    $('.background-container').css({
+      'width': winWidth,
+      'height': winHeight,
+    });
+
+    // make sure div stays full width/height on resize
+    $(window).resize(function () {
+      $('.background-container').css({
+        'width': winWidth,
+        'height': winHeight,
+      });
+    });
+  </script>
 </body>
 </html>

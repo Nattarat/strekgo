@@ -33,6 +33,13 @@
   align-items: center;
 }
 
+.is-flex-spacebetween-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 // Ellipsis
 // ============================================================
 .is-ellipsis {
